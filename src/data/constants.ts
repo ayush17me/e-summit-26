@@ -7,9 +7,9 @@ import {
 // ── Navigation ──
 export const NAV_LINKS = [
   { label: "Competitions", href: "/competitions" },
-  { label: "Networking", href: "/networking" },
-  { label: "Creators", href: "/creators" },
-  { label: "Fair & Expo", href: "/internship" },
+  { label: "Events", href: "/networking" },
+ // { label: "Creators", href: "/creators" },
+  { label: "Startup-Expo", href: "/internship" },
   { label: "Team", href: "/team" },
 ];
 
@@ -65,145 +65,139 @@ export const PAST_SPONSORS = [
   { name: "Think India", logo: "https://placehold.co/160x60/333/999?text=Think+India" },
 ];
 
-// ── Competitions ──
 export const COMPETITIONS = [
-  {
-    id: "pitching-idea",
-    title: "Pitching Idea",
-    description:
-      "The flagship B-Plan competition where visionary founders pitch their startup ideas to a panel of venture capitalists and industry leaders. Stand a chance to win funding, expert mentorship, and recognition.",
-    icon: Brain,
-    team: "Team of 2-4",
-    features: [
-      "Startup B-Plan Pitch",
-      "VC & Industry Panel Evaluation",
-      "Funding Opportunities",
-      "Mentorship Support"
-    ],
-    poster: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=1200&fit=crop",
-    detailedDescription: "Envisage is the flagship B-Plan competition of E-Summit'26 where aspiring entrepreneurs present their groundbreaking startup ideas to a distinguished panel of venture capitalists, angel investors, and industry experts. This is your opportunity to transform your vision into reality with funding, mentorship, and invaluable networking opportunities. Whether you're building the next AI unicorn or solving a critical social problem, Envisage is your launchpad to success.",
-    rules: [
-      "Teams must consist of 2-4 members from any college/university",
-      "Each team gets 10 minutes for presentation + 5 minutes Q&A",
-      "Presentations must include problem statement, solution, market analysis, business model, and financial projections",
-      "Original ideas only - no plagiarism will be tolerated",
-      "Preliminary round submissions via pitch deck (max 15 slides)",
-      "Top 10 teams advance to final pitch in front of investors"
-    ],
-    prizes: "₹1,00,000 in cash prizes + Seed funding opportunities + Mentorship",
-    deadline: "March 15, 2026",
-    rulebookUrl: "/ruleBooks/pitching-idea-rulebook.pdf"
-  },
-  {
-    id: "branding-comp",
-    title: "Branding Comp",
-    description:
-      "A dynamic strategy-based auction where teams compete to acquire and build the most valuable startup asset portfolio. Smart decisions and sharp negotiation are the keys to victory.",
-    icon: Gavel,
-    team: "Team of 2-4",
-    features: [
-      "Strategic Auction Rounds",
-      "Asset Portfolio Building",
-      "Competitive Bidding",
-      "High-Intensity Gameplay"
-    ],
-    poster: "https://images.unsplash.com/photo-1556155092-490a1ba16284?w=800&h=1200&fit=crop",
-    detailedDescription: "Disrupt is a high-stakes strategic auction game where teams compete to build the most valuable startup asset portfolio. Through multiple rounds of bidding, negotiation, and strategic decision-making, teams must acquire assets like technology, talent, market access, and funding to create a winning combination. It's a test of business acumen, strategic thinking, and risk management.",
-    rules: [
-      "Teams of 2-4 participants required",
-      "Each team starts with virtual capital of ₹10 Crores",
-      "Multiple auction rounds with different asset categories",
-      "Teams must build a balanced portfolio across technology, talent, market, and capital",
-      "Final portfolio value determined by judges based on synergy and strategic fit",
-      "No physical currency - all transactions are digital"
-    ],
-    prizes: "₹50,000 in cash prizes + Corporate goodies",
-    deadline: "March 18, 2026",
-    rulebookUrl: "/ruleBooks/branding-comp-rulebook.pdf"
-  },
-  {
-    id: "proto-build",
-    title: "proto-Build",
-    description:
-      "An exciting campus-wide innovation hunt that blends entrepreneurship, problem-solving, and adventure. Decode clues, scan QR codes, and race against time to reach the finish line.",
-    icon: Search,
-    team: "Team of 2-3",
-    features: [
-      "QR Code Challenges",
-      "Startup & Business Clues",
-      "Campus Exploration",
-      "Fast-Paced Competition"
-    ],
-    poster: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=800&h=1200&fit=crop",
-    detailedDescription: "QR Hunt is an exhilarating campus-wide treasure hunt that combines entrepreneurship knowledge with problem-solving and adventure. Teams navigate through the IIEST campus, scanning QR codes at various locations to unlock clues related to startups, business strategies, and innovation. Each clue leads to the next location, testing both your entrepreneurial knowledge and your ability to think on your feet.",
-    rules: [
-      "Teams of 2-3 members allowed",
-      "Smartphones with QR scanner required (one per team)",
-      "All clues must be answered correctly to get next location",
-      "Teams must stay within designated campus boundaries",
-      "First 3 teams to reach final destination win",
-      "No external help or internet searches allowed during the hunt"
-    ],
-    prizes: "₹30,000 in cash prizes + E-Summit merchandise",
-    deadline: "March 20, 2026",
-    rulebookUrl: "/ruleBooks/proto-build-rulebook.pdf"
-  },
-  {
-    id: "quiz",
-    title: "Quiz",
-    description:
-      "Test your knowledge of startups, business trends, and the entrepreneurial ecosystem in this fast-paced quiz battle. Compete with the brightest minds and prove your business IQ.",
-    icon: Wrench,
-    team: "Team of 3-5",
-    features: [
-      "Startup & Business Trivia",
-      "Rapid-Fire Rounds",
-      "Elimination Stages",
-      "Team-Based Challenge"
-    ],
-    poster: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=1200&fit=crop",
-    detailedDescription: "Hackstart is an intensive buildathon where teams race against time to develop innovative solutions to real-world problems. From ideation to working prototype, you'll have 36 hours to build something amazing. With mentorship from industry experts, access to APIs and tools, and a competitive environment, Hackstart pushes you to your creative and technical limits.",
-    rules: [
-      "Teams of 3-5 members required",
-      "36-hour continuous hackathon format",
-      "Problem statements revealed at start of event",
-      "All code must be written during the hackathon",
-      "Open source libraries and APIs allowed",
-      "Final submission: working prototype + presentation + code repository",
-      "Judging based on innovation, technical implementation, and business viability"
-    ],
-    prizes: "₹75,000 in cash prizes + Internship opportunities",
-    deadline: "March 10, 2026",
-    rulebookUrl: "/ruleBooks/quiz-rulebook.pdf"
-  },
-  {
-    id: "auction",
-    title: "Auction",
-    description:
-      "The ultimate creative branding sprint. Design a complete brand identity from scratch — including logo, tagline, and pitch deck — within 24 hours and present your vision to judges.",
-    icon: Palette,
-    team: "Team of 2-3",
-    features: [
-      "Brand Identity Creation",
-      "Logo & Tagline Design",
-      "Pitch Deck Presentation",
-      "24-Hour Creative Sprint"
-    ],
-    poster: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=1200&fit=crop",
-    detailedDescription: "Build With US is the ultimate 24-hour branding challenge where creativity meets strategy. Teams are given a product/service concept and must create a complete brand identity from scratch - including logo, color palette, typography, tagline, brand guidelines, and a compelling pitch deck. This competition tests your design thinking, marketing acumen, and ability to tell a brand story.",
-    rules: [
-      "Teams of 2-3 members (at least one with design skills recommended)",
-      "24-hour time limit from brief to final submission",
-      "Deliverables: Logo, Brand Guidelines, Tagline, Pitch Deck (10 slides max)",
-      "All design work must be original - no stock logos or templates",
-      "Digital submission only - formats: PDF, PNG, PPT",
-      "Judging criteria: Creativity, Brand Coherence, Market Fit, Presentation"
-    ],
-    prizes: "₹40,000 in cash prizes + Design tool subscriptions",
-    deadline: "March 22, 2026",
-    rulebookUrl: "/ruleBooks/auction-rulebook.pdf"
-  },
-];
+    {
+      "id": "bec84-pitch",
+      "title": "BEC 84 Investor Pitch",
+      "tagline": "Pitch your tech startup idea & win funding up to ₹8 Lakhs",
+      "description": "The flagship business idea competition under BEC84 Angel Fund Scheme where IIEST students pitch innovative technology-driven startup ideas to secure funding, mentorship, and incubation support.",
+      "teamSize": "2-4 members",
+      "eligibility": [
+        "Only IIEST Students",
+        "UG (1st–3rd Year)",
+        "PG (1st Year)",
+        "PhD (1st–3rd Year)"
+      ],
+      "themes": [
+        "Sustainability & Green Tech",
+        "Smart Cities",
+        "HealthTech",
+        "EdTech",
+        "FinTech",
+        "Open Innovation"
+      ],
+      "rounds": [
+        "Round 1: Online PPT Submission (5+1 slides)",
+        "Round 2: Pitching at E-Summit",
+        "Round 3: Progress Report + Final Selection"
+      ],
+      "features": [
+        "Funding up to ₹8 Lakhs",
+        "Mentorship under BEC84",
+        "Incubation at TCGTBI",
+        "Real Investor Exposure"
+      ],
+      "submission": [
+        "5+1 Slide Pitch Deck",
+        "Problem, Solution, Market, Business Model"
+      ],
+      "deadline": "12 April, 11:59 PM",
+      "prize": "Up to ₹8,00,000 funding + incubation",
+      "status": "active"
+    },
+    {
+      "id": "vibe-build",
+      "title": "VibeBuild – AI Product Challenge",
+      "tagline": "Build a SaaS product in 6 hours using AI Agents",
+      "description": "A high-intensity AI product development competition focused on Agentic AI workflows. Participants design, build, and deploy a SaaS solution using modern AI tools like Gemini, Claude, Stitch, and Antigravity.",
+      "teamSize": "2-3 members",
+      "eligibility": "to be updated",
+      "rounds": [
+        "Round 1: Idea Abstract + 3-min Video",
+        "Screening Round",
+        "Round 2: 6-hour Offline Build Sprint"
+      ],
+      "features": [
+        "AI-first development (no manual coding focus)",
+        "Agent orchestration workflows",
+        "Rapid SaaS prototyping",
+        "Live deployment & demo"
+      ],
+      "toolsAllowed": [
+        "Google Stitch",
+        "Google Antigravity IDE",
+        "Gemini",
+        "Claude"
+      ],
+      "evaluationCriteria": [
+        "Execution speed",
+        "AI usage efficiency",
+        "Working prototype",
+        "System design"
+      ],
+      "constraints": [
+        "Must build SaaS product",
+        "Use AI agents effectively"
+      ],
+      "deadline": "to be updated",
+      "prize": "₹10,000",
+      "status": "active"
+    },
+    {
+      "id": "campus-creator",
+      "title": "Campus Creator Championship",
+      "tagline": "Create viral content & collaborate with influencers",
+      "description": "A high-engagement digital content competition where participants create reels/videos to boost brand interaction and visibility. Opportunity to collaborate with influencers and showcase creativity.",
+      "teamSize": "Individual / Team (to be updated)",
+      "eligibility": "Open to all participants",
+      "features": [
+        "Reel/Video Creation",
+        "Influencer Collaboration",
+        "Social Media Exposure",
+        "Creative Branding"
+      ],
+      "judgingCriteria": [
+        "Creativity",
+        "Engagement",
+        "Originality",
+        "Execution"
+      ],
+      "submission": [
+        "Instagram Reel / Video Content"
+      ],
+      "deadline": "to be updated",
+      "prize": "₹7,000",
+      "status": "active"
+    },
+    {
+      "id": "case-x",
+      "title": "CaseX – Case Study Competition",
+      "tagline": "Solve real-world business problems & win internships",
+      "description": "A case study competition where participants work on real company problems, analyze data, and propose strategic solutions. Top performers may receive internship opportunities.",
+      "teamSize": "to be updated",
+      "eligibility": "Open to students",
+      "features": [
+        "Real Company Case Studies",
+        "Business Strategy Development",
+        "Presentation to Judges",
+        "Internship Opportunities"
+      ],
+      "rounds": [
+        "Case Release",
+        "Analysis & Solution Submission",
+        "Final Presentation"
+      ],
+      "judgingCriteria": [
+        "Problem Understanding",
+        "Solution Quality",
+        "Feasibility",
+        "Presentation"
+      ],
+      "deadline": "to be updated",
+      "prize": "₹7,000 + Internship Opportunities",
+      "status": "active"
+    }
+  ];
 
 
 // ── Networking Events ──

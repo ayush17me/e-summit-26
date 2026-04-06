@@ -28,15 +28,28 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-14 md:h-20">
-          <Link to="/" className="flex items-left flex-col group">
-           <motion.img 
-             src={logo} 
-             alt="E-Summit 2026" 
-             className="h-8 md:h-10 transition-transform duration-300 group-hover:scale-105" 
-             whileHover={{ rotate: [0, -5, 5, 0] }}
-             transition={{ duration: 0.5 }}
-           /> 
-           {/* <p className="ml-4 pt-1 text-xs font-medium text-purple-600">IIEST Shibpur</p> */}
+          <Link
+            to="/"
+            className="relative flex flex-col items-start group p-1 rounded-xl overflow-hidden"
+          >
+            {/* Intense light-blue blurred glow behind logo */}
+            <motion.div
+              className="pointer-events-none absolute inset-0 -z-10"
+              initial={{ opacity: 0.8 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="absolute inset-[-40%] bg-[radial-gradient(circle_at_center,rgba(240, 245, 247, 0.9),rgba(175, 184, 197, 0.99)_65%)] blur-3xl opacity-90 group-hover:opacity-100 transition-opacity" />
+            </motion.div>
+
+            <motion.img
+              src={logo}
+              alt="E-Summit 2026"
+              className="h-8 md:h-10 transition-transform duration-300 group-hover:scale-105"
+              whileHover={{ rotate: [0, -5, 5, 0] }}
+              transition={{ duration: 0.5 }}
+            />
+            {/* <p className="ml-4 pt-1 text-xs font-medium text-purple-600">IIEST Shibpur</p> */}
           </Link>
 
           {/* Desktop */}

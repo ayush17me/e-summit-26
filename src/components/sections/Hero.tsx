@@ -5,7 +5,7 @@ import { ArrowRight, FileText } from "lucide-react";
 import ParticleCanvas from "@/components/ParticleCanvas";
 import logo from "@/assets/logo-esumm1.png";
 
-const TARGET_DATE = new Date("2027-03-01T00:00:00").getTime();
+const TARGET_DATE = new Date("2026-04-18T00:00:00").getTime();
 
 const useCountdown = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -69,7 +69,7 @@ const Hero = () => {
             transition={{ duration: 0.7 }}
           >
             <Badge className="mb-5 px-4 py-1.5 text-xs sm:text-sm bg-primary/20 text-primary border-primary/30 animate-pulse-glow">
-              COMING SOON
+              18th - 19th April
             </Badge>
           </motion.div>
 
@@ -90,21 +90,21 @@ const Hero = () => {
 
           {/* TAGLINE */}
           <motion.p
-            className="mt-4 text-base sm:text-lg md:text-xl text-muted-foreground/80 max-w-md mx-auto lg:mx-0"
+            className="mt-4 text-base sm:text-lg md:text-xl text-primary text-bold max-w-md mx-auto lg:mx-0"
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            Empowering Women & AI
+          Entreprenuership Summit of IIEST shibpur
           </motion.p>
 
           <motion.p
-            className="font-heading text-xs sm:text-sm md:text-base text-muted-foreground mt-2 tracking-wide"
+            className="font-heading text-xs sm:text-sm md:text-base text-foreground mt-2 tracking-wide"
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.5 }}
           >
-            IIEST SHIBPUR | Entrepreneurship Development Cell
+            Powered By EDC-IIEST
           </motion.p>
 
           {/* BUTTONS */}

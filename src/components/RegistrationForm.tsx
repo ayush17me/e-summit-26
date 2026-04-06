@@ -10,7 +10,7 @@ interface RegistrationFormProps {
   competition: {
     id: string;
     title: string;
-    team: string;
+    teamSize: string;
   };
 }
 
@@ -35,7 +35,7 @@ const RegistrationForm = ({ competition }: RegistrationFormProps) => {
   const [submitted, setSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   
-  const teamSize = parseInt(competition.team.match(/\d+/)?.[0] || "2");
+  const teamSize = parseInt(competition.teamSize.match(/\d+/)?.[0] || "2");
   
   const [formData, setFormData] = useState<FormData>({
     leaderName: "",

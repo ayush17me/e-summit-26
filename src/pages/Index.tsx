@@ -12,8 +12,8 @@ const Index = () => {
       <Hero />
       <About />
       <BentoGrid />
-      <Speakers />
-      <Sponsors />
+      {/* <Speakers />
+      <Sponsors /> */}
       <Gallery />
     </Layout>
   );
