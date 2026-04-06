@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Users } from "lucide-react";
+import { Users, User } from "lucide-react";
 import { TEAM_STRUCTURE } from "@/data/constants";
 import { Badge } from "@/components/ui/badge";
 import ParticleCanvas from "@/components/ParticleCanvas";
@@ -94,139 +94,63 @@ const TeamPage = () => {
             variants={containerVariants}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
-            className="grid gap-12"
+            className="grid gap-8 md:gap-10"
           >
-            {TEAM_STRUCTURE.map((team, roleIndex) => (
-              <motion.div
-                key={team.role}
-                variants={itemVariants}
-                className="space-y-6"
-              >
-                {/* Role Header */}
-                <div className="border-b border-secondary/20 pb-4">
-                  <h3 className="text-2xl md:text-3xl font-heading font-bold text-foreground">
-                    {team.role}
-                  </h3>
-                </div>
+            {TEAM_STRUCTURE.map((team) => {
+              const members = [
+                ...team.members["4th"].map((m: any) => ({ ...m, year: "4th Year" })),
+                ...team.members["3rd"].map((m: any) => ({ ...m, year: "3rd Year" })),
+                ...team.members["2nd"].map((m: any) => ({ ...m, year: "2nd Year" })),
+              ];
 
-                {/* Years Sections */}
-                <div className="grid md:grid-cols-3 gap-8">
-                  {/* 4th Year */}
-                  <div className="space-y-4">
-                    <div className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-semibold">
-                      4th Year
-                    </div>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-3">
-                      {team.members["4th"].length > 0 ? (
-                        team.members["4th"].map((member, mIndex) => (
-                          <motion.div
-                            key={member.name}
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={inView ? { opacity: 1, scale: 1 } : {}}
-                            transition={{ delay: 0.1 * mIndex }}
-                            className="glass rounded-lg overflow-hidden group hover:border-secondary/40 transition-all duration-300"
-                          >
-                            <div className="aspect-square overflow-hidden bg-white/5">
-                              <img
-                                src={member.image}
-                                alt={member.name}
-                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                                loading="lazy"
-                              />
-                            </div>
-                            <div className="p-2 text-center">
-                              <p className="text-xs font-semibold text-foreground truncate">
-                                {member.name}
-                              </p>
-                            </div>
-                          </motion.div>
-                        ))
-                      ) : (
-                        <div className="col-span-2 md:col-span-2 p-3 rounded-lg bg-white/5 text-muted-foreground text-xs italic text-center">
-                          -
-                        </div>
-                      )}
+              return (
+                <motion.div
+                  key={team.role}
+                  variants={itemVariants}
+                  className="glass rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 via-background to-background p-5 md:p-6 shadow-sm"
+                >
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-heading font-bold text-foreground">
+                        {team.role}
+                      </h3>
+                     
                     </div>
                   </div>
 
-                  {/* 3rd Year */}
-                  <div className="space-y-4">
-                    <div className="inline-block px-3 py-1 rounded-full bg-secondary/20 text-secondary text-sm font-semibold">
-                      3rd Year
-                    </div>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-3">
-                      {team.members["3rd"].length > 0 ? (
-                        team.members["3rd"].map((member, mIndex) => (
-                          <motion.div
-                            key={member.name}
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={inView ? { opacity: 1, scale: 1 } : {}}
-                            transition={{ delay: 0.1 * mIndex }}
-                            className="glass rounded-lg overflow-hidden group hover:border-secondary/40 transition-all duration-300"
-                          >
-                            <div className="aspect-square overflow-hidden bg-white/5">
-                              <img
-                                src={member.image}
-                                alt={member.name}
-                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                                loading="lazy"
-                              />
-                            </div>
-                            <div className="p-2 text-center">
-                              <p className="text-xs font-semibold text-foreground truncate">
-                                {member.name}
-                              </p>
-                            </div>
-                          </motion.div>
-                        ))
-                      ) : (
-                        <div className="col-span-2 md:col-span-2 p-3 rounded-lg bg-white/5 text-muted-foreground text-xs italic text-center">
-                          -
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    {members.map((member, index) => (
+                      <motion.div
+                        key={`${member.name}-${member.year}`}
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={inView ? { opacity: 1, y: 0 } : {}}
+                        transition={{ delay: 0.04 * index }}
+                        className="flex items-center gap-3 rounded-lg border border-primary/10 bg-card/40 px-3 py-2.5 hover:border-primary/40 hover:bg-primary/5 transition-colors"
+                      >
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10">
+                          <User className="w-4 h-4 text-primary" />
                         </div>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* 2nd Year */}
-                  <div className="space-y-4">
-                    <div className="inline-block px-3 py-1 rounded-full bg-amber-500/20 text-amber-500 text-sm font-semibold">
-                      2nd Year
-                    </div>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-3">
-                      {team.members["2nd"].length > 0 ? (
-                        team.members["2nd"].map((member, mIndex) => (
-                          <motion.div
-                            key={member.name}
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={inView ? { opacity: 1, scale: 1 } : {}}
-                            transition={{ delay: 0.1 * mIndex }}
-                            className="glass rounded-lg overflow-hidden group hover:border-secondary/40 transition-all duration-300"
-                          >
-                            <div className="aspect-square overflow-hidden bg-white/5">
-                              <img
-                                src={member.image}
-                                alt={member.name}
-                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                                loading="lazy"
-                              />
-                            </div>
-                            <div className="p-2 text-center">
-                              <p className="text-xs font-semibold text-foreground truncate">
-                                {member.name}
-                              </p>
-                            </div>
-                          </motion.div>
-                        ))
-                      ) : (
-                        <div className="col-span-2 md:col-span-2 p-3 rounded-lg bg-white/5 text-muted-foreground text-xs italic text-center">
-                          -
+                        <div className="min-w-0 flex-1">
+                          <p className="text-xs md:text-sm font-semibold text-foreground truncate">
+                            {member.name}
+                          </p>
+                          <div className="flex flex-wrap items-center gap-1 mt-0.5">
+                            {member.dept && (
+                              <span className="text-[10px] md:text-[11px] text-muted-foreground">
+                                {member.dept}
+                              </span>
+                            )}
+                            <span className="text-[9px] md:text-[10px] px-1.5 py-0.5 rounded-full bg-primary/10 text-primary font-medium">
+                              {member.year}
+                            </span>
+                          </div>
                         </div>
-                      )}
-                    </div>
+                      </motion.div>
+                    ))}
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </motion.div>
 
           {/* Stats Section */}
@@ -237,8 +161,10 @@ const TeamPage = () => {
             className="mt-16 grid sm:grid-cols-2 md:grid-cols-4 gap-4"
           >
             <div className="glass rounded-lg p-6 text-center hover:border-secondary/40 transition-all">
-              <div className="text-3xl md:text-4xl font-heading font-bold text-secondary mb-2">10</div>
-              <p className="text-muted-foreground text-sm">Core Teams</p>
+              <div className="text-3xl md:text-4xl font-heading font-bold text-secondary mb-2">
+                {TEAM_STRUCTURE.length}
+              </div>
+              <p className="text-muted-foreground text-sm">Committee Roles</p>
             </div>
             <div className="glass rounded-lg p-6 text-center hover:border-secondary/40 transition-all">
               <div className="text-3xl md:text-4xl font-heading font-bold text-primary mb-2">
@@ -259,6 +185,15 @@ const TeamPage = () => {
               <p className="text-muted-foreground text-sm">2nd Year Members</p>
             </div>
           </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className="mt-8 text-xs md:text-sm text-muted-foreground text-center"
+          >
+            The student committee works under the guidance of the faculty advisory committee to ensure the smooth execution of the summit.
+          </motion.p>
         </div>
       </section>
     </Layout>

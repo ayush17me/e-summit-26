@@ -407,125 +407,165 @@ export const TEAM_STRUCTURE = [
     role: "Secretary",
     members: {
       "4th": [
-        { name: "Shreyansh", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" },
+        { name: "Shreyansh Srivastava", dept: "CST" },
       ],
       "3rd": [],
       "2nd": [],
     },
   },
   {
-    role: "MC",
+    role: "Main Coordinators",
     members: {
       "4th": [
-        { name: "Agarwal Abhash", image: "https://images.unsplash.com/photo-1539571696357-5a69c006ae3e?w=400&h=400&fit=crop" },
+        { name: "Abhash Jain", dept: "IT" },
+        { name: "Vikash Gopalak", dept: "IT" },
       ],
       "3rd": [],
       "2nd": [],
     },
   },
   {
-    role: "JC",
+    role: "Finance",
+    members: {
+      "4th": [
+        { name: "Harsh Agarwal", dept: "MME" },
+        { name: "Harsh Ranjan", dept: "IT" },
+      ],
+      "3rd": [],
+      "2nd": [],
+    },
+  },
+  {
+    role: "Joint Finance",
     members: {
       "4th": [],
       "3rd": [
-        { name: "Surya", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop" },
-        { name: "Yash", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" },
-        { name: "Keshav", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop" },
+        { name: "Shivintya", dept: "ME" },
       ],
       "2nd": [],
     },
   },
   {
-    role: "Finance Team",
-    members: {
-      "4th": [
-        { name: "Ranjan", image: "https://images.unsplash.com/photo-1534308983496-4d93bc592d78?w=400&h=400&fit=crop" },
-        { name: "Vikash", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" },
-      ],
-      "3rd": [
-        { name: "Anshika", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop" },
-        { name: "Arnav", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" },
-      ],
-      "2nd": [],
-    },
-  },
-  {
-    role: "Sponsor Team",
-    members: {
-      "4th": [
-        { name: "Muskan", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop" },
-        { name: "Shreyansh", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" },
-      ],
-      "3rd": [
-        { name: "Sneha Mosha", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop" },
-        { name: "Yash", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" },
-        { name: "Keshav", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop" },
-      ],
-      "2nd": [],
-    },
-  },
-  {
-    role: "Event Team",
-    members: {
-      "4th": [
-        { name: "Ujjwal", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" },
-        { name: "Khushi", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop" },
-        { name: "Shreyansh", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" },
-      ],
-      "3rd": [
-        { name: "Shiv", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop" },
-        { name: "Nitya", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop" },
-        { name: "Himanshu", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" },
-      ],
-      "2nd": [],
-    },
-  },
-  {
-    role: "Publicity Team",
-    members: {
-      "4th": [
-        { name: "Ranjan", image: "https://images.unsplash.com/photo-1534308983496-4d93bc592d78?w=400&h=400&fit=crop" },
-        { name: "Naincy", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop" },
-      ],
-      "3rd": [
-        { name: "Yasharth", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" },
-      ],
-      "2nd": [],
-    },
-  },
-  {
-    role: "Design Team",
-    members: {
-      "4th": [
-        { name: "Amritesh", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" },
-        { name: "Naincy", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop" },
-      ],
-      "3rd": [
-        { name: "Gunn", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop" },
-      ],
-      "2nd": [],
-    },
-  },
-  {
-    role: "Travel & Logistics",
-    members: {
-      "4th": [
-        { name: "Aryan", image: "https://images.unsplash.com/photo-1534308983496-4d93bc592d78?w=400&h=400&fit=crop" },
-        { name: "Kaushal", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" },
-      ],
-      "3rd": [
-        { name: "Sajjan", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop" },
-      ],
-      "2nd": [],
-    },
-  },
-  {
-    role: "Treasurer",
+    role: "Joint Coordinators",
     members: {
       "4th": [],
-      "3rd": [],
+      "3rd": [
+        { name: "Yash Mahajan", dept: "CST" },
+        { name: "Surya Pratap Singh", dept: "IT" },
+      ],
+      "2nd": [],
+    },
+  },
+  {
+    role: "Event",
+    members: {
+      "4th": [
+        { name: "Rima Muskan", dept: "ETC" },
+      ],
+      "3rd": [
+        { name: "Preeti Bhargava", dept: "EE" },
+        { name: "Ankita Kumari", dept: "ME" },
+      ],
       "2nd": [
-        { name: "Arnav", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" },
+        { name: "Akriti Singh", dept: "CST" },
+        { name: "Anushka Rawlani", dept: "IT" },
+        { name: "Ishlavath Rajkumar", dept: "ME" },
+      ],
+    },
+  },
+  {
+    role: "Speaker Acquisition and Management",
+    members: {
+      "4th": [],
+      "3rd": [
+        { name: "Yasharth Shukla", dept: "CST" },
+        { name: "Shivintya", dept: "ME" },
+      ],
+      "2nd": [
+        { name: "Vishal Kumar Swain", dept: "CST" },
+        { name: "Aditya Singh", dept: "CST" },
+        { name: "Mohak Bharadwaj", dept: "Civil" },
+      ],
+    },
+  },
+  {
+    role: "Sponsorship",
+    members: {
+      "4th": [],
+      "3rd": [
+        { name: "Arnav Aarit", dept: "Civil" },
+      ],
+      "2nd": [
+        { name: "Shabd Srivastava", dept: "IT" },
+        { name: "Ritesh Kumar Singh", dept: "IT" },
+        { name: "BV Shree Keshav", dept: "IT" },
+        { name: "Sristi Batsal", dept: "Civil" },
+      ],
+    },
+  },
+  {
+    role: "Publicity",
+    members: {
+      "4th": [],
+      "3rd": [
+        { name: "Keshav Bhagat", dept: "EE" },
+        { name: "Ankita Hore", dept: "CST" },
+      ],
+      "2nd": [
+        { name: "Lakshita Paradkar", dept: "Mining" },
+        { name: "Joyon Rudra Pal", dept: "EE" },
+      ],
+    },
+  },
+  {
+    role: "Graphic Designing Head",
+    members: {
+      "4th": [],
+      "3rd": [
+        { name: "Gunn Gupta", dept: "CST" },
+      ],
+      "2nd": [
+        { name: "Ayush Mishra", dept: "IT" },
+        { name: "Drisana Chatterjee", dept: "MME" },
+      ],
+    },
+  },
+  {
+    role: "Expo and Workshop Head",
+    members: {
+      "4th": [],
+      "3rd": [
+        { name: "Himanshu Kumar", dept: "IT" },
+        { name: "Sumit Kumar", dept: "EE" },
+      ],
+      "2nd": [
+        { name: "Anusree Chowdhury", dept: "CST" },
+        { name: "Nipun Sachin Pandkar", dept: "ME" },
+      ],
+    },
+  },
+  {
+    role: "Web Development and Technical",
+    members: {
+      "4th": [],
+      "3rd": [
+        { name: "Sneha Mishra", dept: "ME" },
+      ],
+      "2nd": [
+        { name: "Bodh Prakash", dept: "Civil" },
+        { name: "Bikramjeet Dasgupta", dept: "EE" },
+      ],
+    },
+  },
+  {
+    role: "Videography",
+    members: {
+      "4th": [],
+      "3rd": [
+        { name: "Anshika Gupta", dept: "IT" },
+      ],
+      "2nd": [
+        { name: "Anupam Kumar Chauhan", dept: "IT" },
       ],
     },
   },
