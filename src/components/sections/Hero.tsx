@@ -71,7 +71,7 @@ const MagneticButton = ({ children }: any) => {
 
 const CountdownBox = ({ value }: { value: number }) => (
   <div className="text-center">
-    <div className="text-4xl md:text-5xl font-bold text-primary">
+    <div className="text-2xl sm:text-3xl md:text-5xl font-bold text-primary">
       {String(value).padStart(2, "0")}
     </div>
   </div>
@@ -95,7 +95,7 @@ const Hero = () => {
   return (
     <section
       onMouseMove={move}
-      className="relative min-h-screen flex items-center overflow-hidden px-4"
+      className="relative min-h-screen flex items-center overflow-hidden px-4 py-24 sm:py-28 md:py-0"
     >
            
       {/* 🌊 Animated Gradient Background */}
@@ -122,17 +122,17 @@ const Hero = () => {
             initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-5xl md:text-7xl font-extrabold leading-tight"
+            className="text-2xl sm:text-4xl md:text-7xl font-extrabold leading-tight"
           >
             <div className="mt-12">
             <div className="relative inline-block">
-               <img src={logo} className="relative w-2xl" />
+               <img src={logo} className="relative w-56 md:w-72 lg:w-80 max-w-full mx-auto lg:mx-0" />
             </div>
           </div>
-            <h3 className=" text-2xL bg-gradient-to-r from-primary via-white to-secondary bg-clip-text text-transparent">
+            <h3 className=" text-xl sm:text-2xl bg-gradient-to-r from-primary via-white to-secondary bg-clip-text text-transparent">
               No Noise,
             </h3>
-            <h3 className=" text-3xl text-white">Just Entrepreneurship</h3>
+            <h3 className=" text-2xl sm:text-3xl text-white">Just Entrepreneurship</h3>
           </motion.h1>
 
           <motion.p
@@ -145,15 +145,15 @@ const Hero = () => {
           </motion.p>
 
           {/* CTA */}
-          <div className="mt-10 flex gap-4 justify-center lg:justify-start">
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <MagneticButton>
-              <a className="px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-secondary text-white font-semibold flex items-center gap-2 shadow-2xl">
+              <a className="px-5 py-2.5 sm:px-8 sm:py-4 rounded-xl bg-gradient-to-r from-primary to-secondary text-white font-semibold text-sm sm:text-base flex items-center gap-2 shadow-2xl w-full sm:w-auto justify-center">
                 Explore Events <ArrowRight />
               </a>
             </MagneticButton>
 
             <MagneticButton>
-              <a className="px-8 py-4 rounded-xl border border-white/20 backdrop-blur-xl hover:bg-white/10 flex items-center gap-2">
+              <a className="px-5 py-2.5 sm:px-8 sm:py-4 rounded-xl border border-white/20 backdrop-blur-xl hover:bg-white/10 flex items-center gap-2 w-full sm:w-auto justify-center text-sm sm:text-base">
                 <FileText /> Brochure
               </a>
             </MagneticButton>
@@ -180,7 +180,7 @@ const Hero = () => {
               LAUNCHING IN
             </h3>
 
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center">
               <CountdownBox value={days} />
               <CountdownBox value={hours} />
               <CountdownBox value={mins} />
