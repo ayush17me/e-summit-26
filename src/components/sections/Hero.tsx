@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  useTransform,
+} from "framer-motion";
 import { ArrowRight, FileText } from "lucide-react";
 import ParticleCanvas from "@/components/ParticleCanvas";
 import logo from "@/assets/logo-esumm1.png";
@@ -33,120 +38,181 @@ const useCountdown = () => {
   return timeLeft;
 };
 
-const CountdownBox = ({ value, label }: { value: number; label: string }) => (
-  <div className="flex flex-col items-center">
-    <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/10 rounded-xl w-16 h-20 md:w-20 md:h-24 flex items-center justify-center shadow-lg">
-      <span className="text-3xl md:text-4xl font-bold text-primary">
-        {String(value).padStart(2, "0")}
-      </span>
+/* 🧲 Magnetic Button */
+const MagneticButton = ({ children }: any) => {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const springX = useSpring(x, { stiffness: 150, damping: 12 });
+  const springY = useSpring(y, { stiffness: 150, damping: 12 });
+
+  const handleMouseMove = (e: any) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    x.set((e.clientX - rect.left - rect.width / 2) * 0.3);
+    y.set((e.clientY - rect.top - rect.height / 2) * 0.3);
+  };
+
+  const reset = () => {
+    x.set(0);
+    y.set(0);
+  };
+
+  return (
+    <motion.div
+      onMouseMove={handleMouseMove}
+      onMouseLeave={reset}
+      style={{ x: springX, y: springY }}
+      className="inline-block"
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+const CountdownBox = ({ value }: { value: number }) => (
+  <div className="text-center">
+    <div className="text-4xl md:text-5xl font-bold text-primary">
+      {String(value).padStart(2, "0")}
     </div>
-    <span className="text-xs text-muted-foreground mt-2 uppercase tracking-widest">
-      {label}
-    </span>
   </div>
 );
 
 const Hero = () => {
   const { days, hours, mins, secs } = useCountdown();
 
-  return (
-    <section className="relative min-h-screen flex items-center overflow-hidden px-4">
+  /* 🎯 Mouse Parallax */
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
 
-      {/* 🔥 Background */}
+  const move = (e: any) => {
+    mouseX.set(e.clientX);
+    mouseY.set(e.clientY);
+  };
+
+  const rotateX = useTransform(mouseY, [0, 800], [10, -10]);
+  const rotateY = useTransform(mouseX, [0, 1200], [-10, 10]);
+
+  return (
+    <section
+      onMouseMove={move}
+      className="relative min-h-screen flex items-center overflow-hidden px-4"
+    >
+           
+      {/* 🌊 Animated Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-[#050510] to-black animate-[pulse_8s_ease-in-out_infinite]" />
+
+      {/* ⚡ Neural glow lines */}
+      <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,rgba(0,255,255,0.15),transparent_60%)]" />
+
+      {/* PARTICLES */}
       <ParticleCanvas />
 
-      {/* Gradient mesh */}
-    
-      {/* Glow blobs */}
-      <div className="absolute top-0 left-1/3 w-[400px] h-[400px] bg-primary/20 blur-[140px] rounded-full" />
-      <div className="absolute bottom-0 right-1/3 w-[350px] h-[350px] bg-secondary/20 blur-[120px] rounded-full" />
+      {/* GRID */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
-
-        {/* LEFT CONTENT */}
+      <motion.div
+        style={{ rotateX, rotateY }}
+        className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center"
+      >
+        {/* LEFT */}
         <div className="text-center lg:text-left">
 
-          {/* 🔥 HEADLINE */}
-         <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="mt-10 flex justify-center lg:justify-start"
-          >
-            <div className="relative">
-              <div className="absolute inset-0 bg-white/30 blur-3xl rounded-full" />
-              <div></div>
-              <img src={logo} className="relative h-40 md:h-30 brightness-250 contrast-250" />
-            </div>
-          </motion.div>
-
-          {/* SUBTEXT */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
+          {/* HEADLINE */}
+          <motion.h1
+            initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mt-4 text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0"
+            transition={{ duration: 1 }}
+            className="text-5xl md:text-7xl font-extrabold leading-tight"
           >
-            The Entrepreneurship Summit of IIEST Shibpur — where ideas turn into startups.
+            <div className="mt-12">
+            <div className="relative inline-block">
+               <img src={logo} className="relative w-2xl" />
+            </div>
+          </div>
+            <h3 className=" text-2xL bg-gradient-to-r from-primary via-white to-secondary bg-clip-text text-transparent">
+              No Noise,
+            </h3>
+            <h3 className=" text-3xl text-white">Just Entrepreneurship</h3>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="mt-6 text-lg text-muted-foreground max-w-xl"
+          >
+            Organised By Entrepreneurship Development Cell.
           </motion.p>
 
-          {/* DATE */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="mt-4 text-primary font-semibold tracking-wide"
-          >
-            18th – 19th April
-          </motion.div>
-
           {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start"
-          >
-            <a  href="/#/networking" className="group relative px-6 py-3 rounded-xl bg-gradient-to-r from-primary to-secondary text-white font-semibold flex items-center gap-2 overflow-hidden">
-              Explore Events
-              <ArrowRight className="group-hover:translate-x-1 transition" />
-            </a>
+          <div className="mt-10 flex gap-4 justify-center lg:justify-start">
+            <MagneticButton>
+              <a className="px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-secondary text-white font-semibold flex items-center gap-2 shadow-2xl">
+                Explore Events <ArrowRight />
+              </a>
+            </MagneticButton>
 
-            <a href="https://www.edciiests.in" className="px-6 py-3 rounded-xl border border-white/20 backdrop-blur-md hover:bg-white/10 transition flex items-center gap-2">
-              
-              EDC Website 
-              <ArrowRight className="transition group-hover:translate-x-1" />
-            </a>
-          </motion.div>
+            <MagneticButton>
+              <a className="px-8 py-4 rounded-xl border border-white/20 backdrop-blur-xl hover:bg-white/10 flex items-center gap-2">
+                <FileText /> Brochure
+              </a>
+            </MagneticButton>
+          </div>
 
-          {/* LOGO FIX (Glow + visibility) */}
+          {/* LOGO FIX */}
           
         </div>
 
-        {/* RIGHT COUNTDOWN */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7 }}
-          className="flex justify-center"
-        >
-          <div className="backdrop-blur-2xl bg-white/5 border border-white/10 rounded-3xl p-8 shadow-2xl">
+        {/* RIGHT */}
+        <div className="relative flex justify-center">
 
-            <h3 className="text-center text-sm uppercase tracking-widest text-primary mb-6">
-              Launch Countdown
+          {/* ROTATING ENERGY RING */}
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
+            className="absolute w-[320px] h-[320px] border border-primary/20 rounded-full"
+          />
+
+          {/* COUNTDOWN */}
+          <div className="relative backdrop-blur-2xl bg-white/5 border border-white/10 rounded-3xl p-10 shadow-[0_0_60px_rgba(0,0,0,0.6)]">
+
+            <h3 className="text-center text-primary tracking-widest mb-6">
+              LAUNCHING IN
             </h3>
 
-            <div className="flex gap-3">
-              <CountdownBox value={days} label="Days" />
-              <CountdownBox value={hours} label="Hours" />
-              <CountdownBox value={mins} label="Mins" />
-              <CountdownBox value={secs} label="Secs" />
+            <div className="flex gap-4">
+              <CountdownBox value={days} />
+              <CountdownBox value={hours} />
+              <CountdownBox value={mins} />
+              <CountdownBox value={secs} />
             </div>
           </div>
-        </motion.div>
-      </div>
 
-     
+          {/* FLOATING GLASS CARDS */}
+          <motion.div
+            animate={{ y: [0, -20, 0] }}
+            transition={{ repeat: Infinity, duration: 5 }}
+            className="absolute -top-10 -left-10 bg-white/5 backdrop-blur-xl p-4 rounded-xl border border-white/10"
+          >
+            🚀 Speakers
+          </motion.div>
+
+          <motion.div
+            animate={{ y: [0, 20, 0] }}
+            transition={{ repeat: Infinity, duration: 6 }}
+            className="absolute bottom-0 -right-10 bg-white/5 backdrop-blur-xl p-4 rounded-xl border border-white/10"
+          >
+            🎯 Competitions
+          </motion.div>
+        </div>
+      </motion.div>
+
+      {/* SCROLL INDICATOR */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
+        <div className="w-[2px] h-14 bg-white/20 relative overflow-hidden">
+          <div className="absolute w-full h-5 bg-white animate-bounce" />
+        </div>
+      </div>
     </section>
   );
 };
