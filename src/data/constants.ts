@@ -90,9 +90,9 @@ export const COMPETITIONS = [
       "Participants must submit a concise pitch deck outlining their startup idea including problem, solution, market opportunity, and business model. Shortlisted teams will present their ideas during E-Summit and selected teams will undergo further evaluation based on execution potential and progress. Only eligible IIEST students can participate and team size must be strictly followed.",
 
     mainImage:
-      "./public/bec84.png",
+      "/bec84.png",
     bannerImage:
-      "./public/bec84.png"
+      "/bec84.png"
   },
 
   {
@@ -119,9 +119,9 @@ export const COMPETITIONS = [
       "Teams must build a functional SaaS product within a limited time using AI tools and agent-based workflows. Manual coding should be minimal, with emphasis on leveraging AI platforms effectively. Judging will be based on execution speed, working prototype, and system design. All teams must adhere to tool constraints and complete development within the given time window.",
 
     mainImage:
-      "./public/vibebuild.png",
+      "/Vibebuild.png",
     bannerImage:
-      "./public/vibebuild-banner.png"
+      "/vibebuild-banner.png"
   },
 
   {
@@ -148,9 +148,9 @@ export const COMPETITIONS = [
       "Participants must create engaging and original video content aligned with the competition theme. Content will be evaluated based on creativity, engagement metrics, originality, and execution quality. Submissions must follow platform guidelines and should not include plagiarized or inappropriate material.",
 
     mainImage:
-      "./public/creatorCompetition.png",
+      "/creatorCompetition.png",
     bannerImage:
-      "./public/campus-creator-banner.png"
+      "/campus-creator-banner.png"
   },
 
   {
@@ -177,9 +177,9 @@ export const COMPETITIONS = [
       "Participants will be provided with real-world business cases that require in-depth analysis and strategic thinking. Teams must submit structured solutions followed by a final presentation. Evaluation will focus on problem understanding, feasibility of solution, analytical depth, and presentation skills.",
 
     mainImage:
-      "./public/caseX.png",
+      "/caseX.png",
     bannerImage:
-      "./public/caseX-banner.png"
+      "/caseX-banner.png"
   }
 ];
 
