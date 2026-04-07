@@ -2,13 +2,10 @@ import Layout from "@/components/Layout";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { COMPETITIONS } from "@/data/constants";
-import CardFlip from "@/components/ui/flip-card";
 import { useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
-import { Trophy } from "lucide-react";
+import { Trophy, Users, Calendar, Gift } from "lucide-react";
 import ParticleCanvas from "@/components/ParticleCanvas";
-
-const CARD_COLORS = ["#4169e1", "#d946ef"];
 
 const CompetitionsPage = () => {
   const ref = useRef(null);
@@ -74,24 +71,39 @@ const CompetitionsPage = () => {
 
       {/* Cards */}
       <section className="py-16 md:py-24 px-4" ref={ref}>
-        <div className="container mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="container mx-auto justify-content grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {COMPETITIONS.map((comp, i) => (
             <motion.div
               key={comp.id}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="cursor-pointer"
+              className="cursor-pointer group h-full"
               onClick={() => navigate(`/competition/${comp.id}`)}
               whileHover={{ y: -5 }}
             >
-              <CardFlip
-                title={comp.title}
-                subtitle={comp.tagline}
-                description={comp.description}
-                features={comp.features}
-                color={CARD_COLORS[i % 2]}
-              />
+              <div className="glass h-full rounded-2xl p-6 border border-border/40 group-hover:border-primary/50 transition-colors duration-200 flex flex-col justify-between bg-gradient-to-br from-background/80 to-background/40">
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                   
+                    <span className="inline-flex items-center gap-1 text-[11px] px-2 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+                      <Trophy className="w-3 h-3" />
+                      Featured
+                    </span>
+                  </div>
+
+                 
+                  <img src={comp.mainImage} alt={comp.name} className="rounded-lg object-cover w-full" />
+                   <p className="font-heading text-xl md:text-xl font-semibold mt-6 group-hover:text-primary transition-colors">
+                     Rewards: {comp.prizePool}
+                  </p>
+                  <div className="text-sm text-muted-foreground/80 mt-2 group-hover:text-primary transition-colors border-t border-border/30 pt-2">
+                    Know more &rarr;
+                  </div>
+                </div>
+
+               
+              </div>
             </motion.div>
           ))}
         </div>

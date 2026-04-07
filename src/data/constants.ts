@@ -66,139 +66,122 @@ export const PAST_SPONSORS = [
 ];
 
 export const COMPETITIONS = [
-    {
-      "id": "bec84-pitch",
-      "title": "BEC 84 Investor Pitch",
-      "tagline": "Pitch your tech startup idea & win funding up to ₹8 Lakhs",
-      "description": "The flagship business idea competition under BEC84 Angel Fund Scheme where IIEST students pitch innovative technology-driven startup ideas to secure funding, mentorship, and incubation support.",
-      "teamSize": "2-4 members",
-      "eligibility": [
-        "Only IIEST Students",
-        "UG (1st–3rd Year)",
-        "PG (1st Year)",
-        "PhD (1st–3rd Year)"
-      ],
-      "themes": [
-        "Sustainability & Green Tech",
-        "Smart Cities",
-        "HealthTech",
-        "EdTech",
-        "FinTech",
-        "Open Innovation"
-      ],
-      "rounds": [
-        "Round 1: Online PPT Submission (5+1 slides)",
-        "Round 2: Pitching at E-Summit",
-        "Round 3: Progress Report + Final Selection"
-      ],
-      "features": [
-        "Funding up to ₹8 Lakhs",
-        "Mentorship under BEC84",
-        "Incubation at TCGTBI",
-        "Real Investor Exposure"
-      ],
-      "submission": [
-        "5+1 Slide Pitch Deck",
-        "Problem, Solution, Market, Business Model"
-      ],
-      "deadline": "12 April, 11:59 PM",
-      "prize": "Up to ₹8,00,000 funding + incubation",
-      "status": "active"
-    },
-    {
-      "id": "vibe-build",
-      "title": "VibeBuild – AI Product Challenge",
-      "tagline": "Build a SaaS product in 6 hours using AI Agents",
-      "description": "A high-intensity AI product development competition focused on Agentic AI workflows. Participants design, build, and deploy a SaaS solution using modern AI tools like Gemini, Claude, Stitch, and Antigravity.",
-      "teamSize": "2-3 members",
-      "eligibility": "to be updated",
-      "rounds": [
-        "Round 1: Idea Abstract + 3-min Video",
-        "Screening Round",
-        "Round 2: 6-hour Offline Build Sprint"
-      ],
-      "features": [
-        "AI-first development (no manual coding focus)",
-        "Agent orchestration workflows",
-        "Rapid SaaS prototyping",
-        "Live deployment & demo"
-      ],
-      "toolsAllowed": [
-        "Google Stitch",
-        "Google Antigravity IDE",
-        "Gemini",
-        "Claude"
-      ],
-      "evaluationCriteria": [
-        "Execution speed",
-        "AI usage efficiency",
-        "Working prototype",
-        "System design"
-      ],
-      "constraints": [
-        "Must build SaaS product",
-        "Use AI agents effectively"
-      ],
-      "deadline": "to be updated",
-      "prize": "₹10,000",
-      "status": "active"
-    },
-    {
-      "id": "campus-creator",
-      "title": "Campus Creator Championship",
-      "tagline": "Create viral content & collaborate with influencers",
-      "description": "A high-engagement digital content competition where participants create reels/videos to boost brand interaction and visibility. Opportunity to collaborate with influencers and showcase creativity.",
-      "teamSize": "Individual / Team (to be updated)",
-      "eligibility": "Open to all participants",
-      "features": [
-        "Reel/Video Creation",
-        "Influencer Collaboration",
-        "Social Media Exposure",
-        "Creative Branding"
-      ],
-      "judgingCriteria": [
-        "Creativity",
-        "Engagement",
-        "Originality",
-        "Execution"
-      ],
-      "submission": [
-        "Instagram Reel / Video Content"
-      ],
-      "deadline": "to be updated",
-      "prize": "₹7,000",
-      "status": "active"
-    },
-    {
-      "id": "case-x",
-      "title": "CaseX – Case Study Competition",
-      "tagline": "Solve real-world business problems & win internships",
-      "description": "A case study competition where participants work on real company problems, analyze data, and propose strategic solutions. Top performers may receive internship opportunities.",
-      "teamSize": "to be updated",
-      "eligibility": "Open to students",
-      "features": [
-        "Real Company Case Studies",
-        "Business Strategy Development",
-        "Presentation to Judges",
-        "Internship Opportunities"
-      ],
-      "rounds": [
-        "Case Release",
-        "Analysis & Solution Submission",
-        "Final Presentation"
-      ],
-      "judgingCriteria": [
-        "Problem Understanding",
-        "Solution Quality",
-        "Feasibility",
-        "Presentation"
-      ],
-      "deadline": "to be updated",
-      "prize": "₹7,000 + Internship Opportunities",
-      "status": "active"
-    }
-  ];
+  {
+    id: "bec84-pitch",
+    name: "BEC 84 Investor Pitch",
+    tagline: "Pitch your tech startup idea & win funding up to ₹8 Lakhs",
+    description:
+      "The flagship business idea competition under BEC84 Angel Fund Scheme where IIEST students pitch innovative technology-driven startup ideas to secure funding, mentorship, and incubation support.",
+    
+    teamSize: "2–4 members",
+    prizePool: "Up to ₹8,00,000 funding + incubation",
+    deadline: "12 April, 11:59 PM",
+    
+    rulebookLink: "",
 
+    keyFeatures: [
+      "Funding up to ₹8 Lakhs",
+      "Mentorship under BEC84",
+      "Incubation at TCGTBI",
+      "Real Investor Exposure"
+    ],
+
+    rulesDescription:
+      "Participants must submit a concise pitch deck outlining their startup idea including problem, solution, market opportunity, and business model. Shortlisted teams will present their ideas during E-Summit and selected teams will undergo further evaluation based on execution potential and progress. Only eligible IIEST students can participate and team size must be strictly followed.",
+
+    mainImage:
+      "./public/bec84.png",
+    bannerImage:
+      "./public/bec84.png"
+  },
+
+  {
+    id: "vibe-build",
+    name: "VibeBuild – AI Product Challenge",
+    tagline: "Build a SaaS product in 6 hours using AI Agents",
+    description:
+      "A high-intensity AI product development competition focused on Agentic AI workflows. Participants design, build, and deploy a SaaS solution using modern AI tools like Gemini, Claude, Stitch, and Antigravity.",
+    
+    teamSize: "2–3 members",
+    prizePool: "₹10,000",
+    deadline: "To Be Announced",
+    
+    rulebookLink: "",
+
+    keyFeatures: [
+      "AI-first development",
+      "Agent orchestration workflows",
+      "Rapid SaaS prototyping",
+      "Live deployment & demo"
+    ],
+
+    rulesDescription:
+      "Teams must build a functional SaaS product within a limited time using AI tools and agent-based workflows. Manual coding should be minimal, with emphasis on leveraging AI platforms effectively. Judging will be based on execution speed, working prototype, and system design. All teams must adhere to tool constraints and complete development within the given time window.",
+
+    mainImage:
+      "./public/vibebuild.png",
+    bannerImage:
+      "./public/vibebuild-banner.png"
+  },
+
+  {
+    id: "campus-creator",
+    name: "Campus Creator Championship",
+    tagline: "Create viral content & collaborate with influencers",
+    description:
+      "A high-engagement digital content competition where participants create reels/videos to boost brand interaction and visibility. Opportunity to collaborate with influencers and showcase creativity.",
+    
+    teamSize: "Individual / Team",
+    prizePool: "₹7,000",
+    deadline: "To Be Announced",
+    
+    rulebookLink: "",
+
+    keyFeatures: [
+      "Reel/Video Creation",
+      "Influencer Collaboration",
+      "Social Media Exposure",
+      "Creative Branding"
+    ],
+
+    rulesDescription:
+      "Participants must create engaging and original video content aligned with the competition theme. Content will be evaluated based on creativity, engagement metrics, originality, and execution quality. Submissions must follow platform guidelines and should not include plagiarized or inappropriate material.",
+
+    mainImage:
+      "./public/creatorCompetition.png",
+    bannerImage:
+      "./public/campus-creator-banner.png"
+  },
+
+  {
+    id: "case-x",
+    name: "CaseX – Case Study Competition",
+    tagline: "Solve real-world business problems & win internships",
+    description:
+      "A case study competition where participants work on real company problems, analyze data, and propose strategic solutions. Top performers may receive internship opportunities.",
+    
+    teamSize: "To Be Announced",
+    prizePool: "₹7,000 + Internship Opportunities",
+    deadline: "To Be Announced",
+    
+    rulebookLink: "",
+
+    keyFeatures: [
+      "Real Company Case Studies",
+      "Business Strategy Development",
+      "Presentation to Judges",
+      "Internship Opportunities"
+    ],
+
+    rulesDescription:
+      "Participants will be provided with real-world business cases that require in-depth analysis and strategic thinking. Teams must submit structured solutions followed by a final presentation. Evaluation will focus on problem understanding, feasibility of solution, analytical depth, and presentation skills.",
+
+    mainImage:
+      "./public/caseX.png",
+    bannerImage:
+      "./public/caseX-banner.png"
+  }
+];
 
 // ── Networking Events ──
 export const NETWORKING_EVENTS = [

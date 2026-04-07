@@ -41,6 +41,7 @@ const CompetitionDetail = () => {
     <Layout>
       {/* Hero Section */}
       <section className="relative h-96 md:h-[500px] overflow-hidden">
+       
         <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-background to-background" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background" />
         
@@ -62,7 +63,7 @@ const CompetitionDetail = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <h1 className="font-heading text-4xl md:text-6xl font-bold mb-2 text-gradient">
-            {competition.title}
+            {competition.name}
           </h1>
           <p className="text-muted-foreground text-lg">{competition.tagline}</p>
         </motion.div>
@@ -87,7 +88,7 @@ const CompetitionDetail = () => {
             <div className="glass rounded-xl p-4 text-center">
               <Trophy size={24} className="mx-auto mb-2 text-secondary" />
               <p className="text-xs text-muted-foreground mb-1">Prize Pool</p>
-              <p className="font-semibold text-sm">{competition.prize.split("+")[0].trim()}</p>
+              <p className="font-semibold text-sm">{competition.prizePool.split("+")[0].trim()}</p>
             </div>
             
             <div className="glass rounded-xl p-4 text-center">
@@ -102,7 +103,13 @@ const CompetitionDetail = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="font-semibold text-xs text-primary hover:text-secondary transition-colors"
+                className="font-semibold text-xs text-primary hover:text-secondary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={!competition.rulebookLink}
+                onClick={() => {
+                  if (competition.rulebookLink) {
+                    window.open(competition.rulebookLink, "_blank");
+                  }
+                }}
               >
                 Download
               </motion.button>
@@ -136,7 +143,7 @@ const CompetitionDetail = () => {
 
                   <h3 className="text-xl font-heading font-semibold mb-4">Key Features</h3>
                   <div className="grid md:grid-cols-2 gap-4">
-                    {competition.features.map((feature, i) => (
+                    {(competition.keyFeatures ?? []).map((feature, i) => (
                       <motion.div
                         key={i}
                         className="glass rounded-lg p-4 flex items-start gap-3"
@@ -152,7 +159,7 @@ const CompetitionDetail = () => {
 
                   <div className="mt-8 p-6 glass rounded-xl border-l-4 border-primary">
                     <h4 className="font-heading font-semibold mb-2">Prizes & Recognition</h4>
-                    <p className="text-md">{competition.prize}</p>
+                    <p className="text-md">{competition.prizePool}</p>
                   </div>
                 </motion.div>
               </TabsContent>
@@ -165,6 +172,14 @@ const CompetitionDetail = () => {
                   transition={{ duration: 0.4 }}
                 >
                   <h2 className="text-2xl md:text-3xl font-heading font-bold mb-6">Structure & Guidelines</h2>
+
+                  {competition.rulesDescription && (
+                    <section className="mb-8">
+                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed whitespace-pre-line">
+                        {competition.rulesDescription}
+                      </p>
+                    </section>
+                  )}
 
                   <div className="space-y-6 mb-8">
                     {eligibility.length > 0 && (
@@ -303,7 +318,7 @@ const CompetitionDetail = () => {
                 >
                   <h2 className="text-2xl md:text-3xl font-heading font-bold mb-2">Register Now</h2>
                   <p className="text-muted-foreground mb-8">
-                    Secure your spot in {competition.title}. Fill out the form below to register your team.
+                    Secure your spot in {competition.name}. Fill out the form below to register your team.
                   </p>
                   
                   <RegistrationForm competition={competition} />
