@@ -102,7 +102,7 @@ const About = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-12 sm:mt-16 md:mt-20 grid grid-cols-3 gap-3 sm:gap-4 md:gap-6"
+          className="mt-12 sm:mt-16 md:mt-20 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6"
         >
           {STATS.map((stat, index) => (
             <motion.div 

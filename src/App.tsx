@@ -28,13 +28,13 @@ const App = () => (
           <Route path="/competitions" element={<Competitions />} />
           <Route path="/competition/:id" element={<CompetitionDetail />} />
           <Route path="/networking" element={<Networking />} />
-          <Route path="/creators" element={<Creators />} />
+
           <Route path="/internship" element={<Internship />} />
           <Route path="/team" element={<Team />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </HashRouter>
-     
+
     </TooltipProvider>
   </QueryClientProvider>
 );

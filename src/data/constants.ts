@@ -7,8 +7,8 @@ import {
 // ── Navigation ──
 export const NAV_LINKS = [
   { label: "Competitions", href: "/competitions" },
-  { label: "Events", href: "/networking" },
- // { label: "Creators", href: "/creators" },
+  { label: "Networking", href: "/networking" },
+  // { label: "Creators", href: "/creators" },
   { label: "Startup-Expo", href: "/internship" },
   { label: "Team", href: "/team" },
 ];
@@ -25,7 +25,7 @@ export const TRACKS = [
   { title: "Competitions", description: "Envisage, Disrupt, QR Hunt, Hackstart & more — test your entrepreneurial mettle.", icon: Trophy, href: "/competitions", span: "col-span-2 row-span-2" },
   { title: "Keynote Sessions", description: "Industry leaders sharing vision on AI, startups & Women empowerment.", icon: Mic, href: "/networking", span: "col-span-1 row-span-1" },
   { title: "Panel Discussions", description: "Debates on AI, Ethics, and the future of entrepreneurship.", icon: MessageSquare, href: "/networking", span: "col-span-1 row-span-1" },
-  { title: "Creators Conclave", description: "Digital influencers & content creators come together.", icon: Video, href: "/creators", span: "col-span-1 row-span-2" },
+  { title: "Creators Conclave", description: "Digital influencers & content creators come together.", icon: Video, href: "/networking", span: "col-span-1 row-span-2" },
   { title: "Fair & Expo", description: "Internship Fair, Startup Expo, Drone & Auto Expo — all under one roof.", icon: Briefcase, href: "/internship", span: "col-span-1 row-span-1" },
   { title: "Workshops", description: "Hands-on sessions to build real skills in tech and business.", icon: Wrench, href: "/networking", span: "col-span-1 row-span-1" },
 ];
@@ -72,11 +72,11 @@ export const COMPETITIONS = [
     tagline: "Pitch your tech startup idea & win funding up to ₹8 Lakhs",
     description:
       "The flagship business idea competition under BEC84 Angel Fund Scheme where IIEST students pitch innovative technology-driven startup ideas to secure funding, mentorship, and incubation support.",
-    
+
     teamSize: "2–4 members",
     prizePool: "Up to ₹8,00,000 funding + incubation",
     deadline: "12 April, 11:59 PM",
-    
+
     rulebookLink: "",
 
     keyFeatures: [
@@ -101,11 +101,11 @@ export const COMPETITIONS = [
     tagline: "Build a SaaS product in 6 hours using AI Agents",
     description:
       "A high-intensity AI product development competition focused on Agentic AI workflows. Participants design, build, and deploy a SaaS solution using modern AI tools like Gemini, Claude, Stitch, and Antigravity.",
-    
+
     teamSize: "2–3 members",
     prizePool: "₹10,000",
     deadline: "To Be Announced",
-    
+
     rulebookLink: "",
 
     keyFeatures: [
@@ -130,11 +130,11 @@ export const COMPETITIONS = [
     tagline: "Create viral content & collaborate with influencers",
     description:
       "A high-engagement digital content competition where participants create reels/videos to boost brand interaction and visibility. Opportunity to collaborate with influencers and showcase creativity.",
-    
+
     teamSize: "Individual / Team",
     prizePool: "₹7,000",
     deadline: "To Be Announced",
-    
+
     rulebookLink: "",
 
     keyFeatures: [
@@ -159,11 +159,11 @@ export const COMPETITIONS = [
     tagline: "Solve real-world business problems & win internships",
     description:
       "A case study competition where participants work on real company problems, analyze data, and propose strategic solutions. Top performers may receive internship opportunities.",
-    
+
     teamSize: "To Be Announced",
     prizePool: "₹7,000 + Internship Opportunities",
     deadline: "To Be Announced",
-    
+
     rulebookLink: "",
 
     keyFeatures: [
@@ -185,13 +185,13 @@ export const COMPETITIONS = [
 
 // ── Networking Events ──
 export const NETWORKING_EVENTS = [
-  { 
+  {
     id: "keynote-1",
-    title: "Keynote Session 1", 
+    title: "Keynote Session 1",
     type: "Keynote",
-    description: "Opening keynote on 'The Future of Women in AI' by leading industry voices.", 
+    description: "Opening keynote on 'The Future of Women in AI' by leading industry voices.",
     fullDescription: "Join us for an inspiring opening keynote where industry pioneers discuss the transformative role of women in the AI revolution. Learn about breakthrough technologies, career opportunities, and how AI is reshaping the entrepreneurial landscape.",
-    time: "10:00 AM", 
+    time: "10:00 AM",
     day: "Day 1",
     duration: "45 minutes",
     speakers: [
@@ -202,13 +202,13 @@ export const NETWORKING_EVENTS = [
     capacity: "500 attendees",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
   },
-  { 
+  {
     id: "panel-1",
-    title: "Panel Discussion 1", 
+    title: "Panel Discussion 1",
     type: "Panel Discussion",
-    description: "Debate: 'AI Ethics — Where Do We Draw the Line?' with experts from academia and industry.", 
+    description: "Debate: 'AI Ethics — Where Do We Draw the Line?' with experts from academia and industry.",
     fullDescription: "A thought-provoking panel discussion featuring ethicists, technologists, and policymakers debating the critical questions around AI ethics, privacy, and responsible innovation. Engage with leaders shaping the future of ethical AI.",
-    time: "2:00 PM", 
+    time: "2:00 PM",
     day: "Day 1",
     duration: "60 minutes",
     speakers: [
@@ -220,13 +220,13 @@ export const NETWORKING_EVENTS = [
     capacity: "300 attendees",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
   },
-  { 
+  {
     id: "keynote-2",
-    title: "Keynote Session 2", 
+    title: "Keynote Session 2",
     type: "Keynote",
-    description: "Closing keynote on 'Building Billion-Dollar Startups from Tier-2 Cities'.", 
+    description: "Closing keynote on 'Building Billion-Dollar Startups from Tier-2 Cities'.",
     fullDescription: "Learn from successful entrepreneurs who have built billion-dollar companies from non-metro cities. Discover strategies for leveraging local advantages, accessing global markets, and scale operations with limited resources.",
-    time: "10:00 AM", 
+    time: "10:00 AM",
     day: "Day 2",
     duration: "45 minutes",
     speakers: [
@@ -237,13 +237,13 @@ export const NETWORKING_EVENTS = [
     capacity: "500 attendees",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
   },
-  { 
+  {
     id: "panel-2",
-    title: "Panel Discussion 2", 
+    title: "Panel Discussion 2",
     type: "Panel Discussion",
-    description: "Discussion: 'Women Founders — Breaking the Glass Ceiling in Tech'.", 
+    description: "Discussion: 'Women Founders — Breaking the Glass Ceiling in Tech'.",
     fullDescription: "Celebrating women founders who are breaking barriers and building successful tech companies. Hear their stories of challenges, triumphs, and lessons learned on the path to building billion-dollar enterprises.",
-    time: "2:00 PM", 
+    time: "2:00 PM",
     day: "Day 2",
     duration: "60 minutes",
     speakers: [
@@ -255,13 +255,13 @@ export const NETWORKING_EVENTS = [
     capacity: "300 attendees",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
   },
-  { 
+  {
     id: "expo",
-    title: "Startup Expo & Drone/Auto Expo", 
+    title: "Startup Expo & Drone/Auto Expo",
     type: "Exhibition",
-    description: "Exhibition hall where 50+ startups showcase products alongside drone and auto exhibitions.", 
+    description: "Exhibition hall where 50+ startups showcase products alongside drone and auto exhibitions.",
     fullDescription: "Explore an exclusive exhibition featuring 50+ innovative startups, cutting-edge drone technologies, and autonomous vehicle showcases. Network with founders, investors, and industry leaders all in one place.",
-    time: "All Day", 
+    time: "All Day",
     day: "Day 1 & 2",
     duration: "Full Event",
     speakers: [],
@@ -381,8 +381,8 @@ export const SOCIAL_LINKS = [
 export const CONTACT_INFO = {
   email: "iiests.edc@gmail.com",
   phone1: { name: "Shreyansh", number: "+91 84780 90242" },
-  phone2: { name: "Arnav Aarit", number: "+91 90602 27813" },
-  address: "Entrepreneurship Development Cell, IIEST Shibpur, Howrah, West Bengal — 711101",
+  phone2: { name: "Abhash Jain", number: "+91 7906988259" },
+  address: "Entrepreneurship Development Cell, IIEST Shibpur, Howrah, West Bengal — 711103",
 };
 // ── Team Structure ──
 export const TEAM_STRUCTURE = [
@@ -459,7 +459,7 @@ export const TEAM_STRUCTURE = [
   {
     role: "Speaker Acquisition and Management",
     members: {
-      "4th": [  { name: "Amritesh Kumar", dept: "IT" },],
+      "4th": [{ name: "Amritesh Kumar", dept: "IT" },],
       "3rd": [
         { name: "Yasharth Shukla", dept: "CST" },
         { name: "Shivintya", dept: "ME" },

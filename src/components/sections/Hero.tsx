@@ -170,11 +170,11 @@ const Hero = () => {
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
-            className="absolute w-[320px] h-[320px] border border-primary/20 rounded-full"
+            className="absolute w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] border border-primary/20 rounded-full"
           />
 
           {/* COUNTDOWN */}
-          <div className="relative backdrop-blur-2xl bg-white/5 border border-white/10 rounded-3xl p-10 shadow-[0_0_60px_rgba(0,0,0,0.6)]">
+          <div className="relative backdrop-blur-2xl bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-10 shadow-[0_0_60px_rgba(0,0,0,0.6)]">
 
             <h3 className="text-center text-primary tracking-widest mb-6">
               LAUNCHING IN
@@ -192,7 +192,7 @@ const Hero = () => {
           <motion.div
             animate={{ y: [0, -20, 0] }}
             transition={{ repeat: Infinity, duration: 5 }}
-            className="absolute -top-10 -left-10 bg-white/5 backdrop-blur-xl p-4 rounded-xl border border-white/10"
+            className="hidden sm:block absolute -top-4 sm:-top-10 -left-4 sm:-left-10 bg-white/5 backdrop-blur-xl p-3 sm:p-4 rounded-xl border border-white/10 text-sm sm:text-base z-10"
           >
             🚀 Speakers
           </motion.div>
@@ -200,7 +200,7 @@ const Hero = () => {
           <motion.div
             animate={{ y: [0, 20, 0] }}
             transition={{ repeat: Infinity, duration: 6 }}
-            className="absolute bottom-0 -right-10 bg-white/5 backdrop-blur-xl p-4 rounded-xl border border-white/10"
+            className="hidden sm:block absolute bottom-0 -right-4 sm:-right-10 bg-white/5 backdrop-blur-xl p-3 sm:p-4 rounded-xl border border-white/10 text-sm sm:text-base z-10"
           >
             🎯 Competitions
           </motion.div>
