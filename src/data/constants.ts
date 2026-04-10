@@ -7,7 +7,7 @@ import {
 // ── Navigation ──
 export const NAV_LINKS = [
   { label: "Competitions", href: "/competitions" },
-  { label: "Networking", href: "/networking" },
+  { label: "Event", href: "/networking" },
   // { label: "Creators", href: "/creators" },
   { label: "Startup-Expo", href: "/internship" },
   { label: "Team", href: "/team" },
@@ -128,25 +128,48 @@ export const COMPETITIONS = [
   {
     id: "campus-creator",
     name: "Campus Creator Championship",
-    tagline: "Create viral content & collaborate with influencers",
+    tagline: "Content Creation Competition (Reels)",
     description:
-      "A high-engagement digital content competition where participants create reels/videos to boost brand interaction and visibility. Opportunity to collaborate with influencers and showcase creativity.",
+      "Campus Creator Championship is a real-time content creation competition conducted during the E-Summit. Participants are required to conceptualize, shoot, edit, and publish short-form video content (Instagram Reels) within the event duration.",
 
     teamSize: "Individual / Team",
     prizePool: "₹7,000",
-    deadline: "To Be Announced",
+    deadline: "Throughout E-Summit (Full Day)",
 
     rulebookLink: "",
 
     keyFeatures: [
-      "Reel/Video Creation",
-      "Influencer Collaboration",
-      "Social Media Exposure",
-      "Creative Branding"
+      "Real-time Reel Production",
+      "Brand & Expo Integration",
+      "Live Event Storytelling",
+      "Engagement Driven"
     ],
 
     rulesDescription:
-      "Participants must create engaging and original video content aligned with the competition theme. Content will be evaluated based on creativity, engagement metrics, originality, and execution quality. Submissions must follow platform guidelines and should not include plagiarized or inappropriate material.",
+      "Campus Creator Championship is designed to evaluate participants on creativity, storytelling, and their ability to generate engagement under time constraints using live event environments.\n\nEvent Structure:\n1. Briefing Session: Participants will be briefed regarding rules, themes, and submission process.\n2. Content Creation Phase: Participants will create content during the event. All footage must be captured within E-Summit premises. Editing must be completed within the event duration.\n3. Submission Guidelines: Content must be uploaded as a Reel by the communicated deadline.\n\nRules & Regulations:\n• Content must be original and created during the event.\n• Use of pre-recorded or previously published content is strictly prohibited.\n• Any form of plagiarism or copyright violation will lead to disqualification.\n• The decision of the judging panel will be final and binding.",
+
+    submission: [
+      "Content must be uploaded on Instagram as a Reel",
+      "Integrate the brand mention or expo company assigned to you in the storyline",
+      "Tag the official E-Summit Instagram handle",
+      "Tag all designated sponsor handles (mandatory)",
+      "Use the designated event hashtag",
+      "Submission deadline will be communicated during the briefing"
+    ],
+
+    evaluationCriteria: [
+      "Engagement Metrics: Views, likes, shares, and overall reach",
+      "Creativity: Originality and uniqueness of the concept",
+      "Brand Integration: Inclusion and effective representation of sponsors/expo stalls",
+      "Relevance: Alignment with event theme and environment",
+      "Execution Quality: Editing, storytelling, and presentation"
+    ],
+
+    constraints: [
+      "All footage must be captured within the E-Summit premises",
+      "Editing must be completed within the event duration",
+      "Entries submitted after the deadline will not be considered"
+    ],
 
     mainImage:
       "/creatorCompetition.png",
@@ -204,90 +227,190 @@ export const COMPETITIONS = [
   }
 ];
 
-// ── Networking Events ──
+// ── Event Schedule ──
 export const NETWORKING_EVENTS = [
+  // ── Day 1 ──
   {
-    id: "keynote-1",
-    title: "Keynote Session 1",
-    type: "Keynote",
-    description: "Opening keynote on 'The Future of Women in AI' by leading industry voices.",
-    fullDescription: "Join us for an inspiring opening keynote where industry pioneers discuss the transformative role of women in the AI revolution. Learn about breakthrough technologies, career opportunities, and how AI is reshaping the entrepreneurial landscape.",
-    time: "10:00 AM",
+    id: "inauguration",
+    title: "Inauguration",
+    type: "Ceremony",
+    description: "Grand opening ceremony of E-Summit'26 — setting the stage for two days of innovation and entrepreneurship.",
+    fullDescription: "The official inauguration of E-Summit'26 at IIEST Shibpur. Join us as we kick off two days of competitions, keynotes, panels, and networking with a grand opening ceremony featuring distinguished guests and dignitaries.",
+    time: "11:00 AM",
     day: "Day 1",
-    duration: "45 minutes",
-    speakers: [
-      { name: "Dr. Priya Sharma", title: "AI Researcher & Entrepreneur", company: "TechVenture Labs" },
-      { name: "Aisha Patel", title: "Women in Tech Leader", company: "Global Tech Initiative" }
-    ],
-    venue: "Main Auditorium, IIEST Shibpur",
+    duration: "1 hour",
+    speakers: [],
+    venue: "IIEST Shibpur",
+    capacity: "All attendees",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
+  },
+  {
+    id: "keynote-sessions",
+    title: "Keynote Sessions",
+    type: "Keynote",
+    description: "Industry leaders sharing insights on the future of startups, AI, and entrepreneurship.",
+    fullDescription: "Insightful keynote sessions featuring industry pioneers who share their vision on AI, startups, and the entrepreneurial landscape. Gain actionable takeaways and be inspired by leaders shaping tomorrow.",
+    time: "12:00 Noon",
+    day: "Day 1",
+    duration: "30–45 mins",
+    speakers: [],
+    venue: "IIEST Shibpur",
     capacity: "500 attendees",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
   },
   {
-    id: "panel-1",
+    id: "bec84-pitch-event",
+    title: "BEC 84 Business Competition Pitch",
+    type: "Competition",
+    description: "The flagship startup pitch competition under the BEC84 Angel Fund Scheme.",
+    fullDescription: "Shortlisted teams pitch their innovative tech-driven startup ideas to a panel of investors and mentors. Compete for funding up to ₹8 Lakhs, incubation support, and mentorship under the BEC84 Angel Fund Scheme.",
+    time: "2:00 PM – 3:30 PM",
+    day: "Day 1",
+    duration: "90 mins",
+    speakers: [],
+    venue: "IIEST Shibpur",
+    capacity: "300 attendees",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
+  },
+  {
+    id: "workshop-1",
+    title: "Workshop 1",
+    type: "Workshop",
+    description: "Hands-on workshop to build real skills in tech and business.",
+    fullDescription: "A focused, hands-on workshop session designed to equip attendees with practical skills in technology or business. Engage with industry experts and learn by doing.",
+    time: "3:30 PM – 4:15 PM",
+    day: "Day 1",
+    duration: "45 mins",
+    speakers: [],
+    venue: "IIEST Shibpur",
+    capacity: "200 attendees",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
+  },
+  {
+    id: "panel-discussion-1",
     title: "Panel Discussion 1",
     type: "Panel Discussion",
-    description: "Debate: 'AI Ethics — Where Do We Draw the Line?' with experts from academia and industry.",
-    fullDescription: "A thought-provoking panel discussion featuring ethicists, technologists, and policymakers debating the critical questions around AI ethics, privacy, and responsible innovation. Engage with leaders shaping the future of ethical AI.",
-    time: "2:00 PM",
+    description: "Experts from academia and industry debate pressing topics in AI, ethics, and entrepreneurship.",
+    fullDescription: "A thought-provoking panel discussion featuring experts from diverse backgrounds debating critical questions around AI, ethics, innovation, and the future of entrepreneurship.",
+    time: "4:30 PM – 5:30 PM",
     day: "Day 1",
-    duration: "60 minutes",
-    speakers: [
-      { name: "Prof. Rajesh Kumar", title: "Ethics Professor", company: "IIEST Shibpur" },
-      { name: "Vikram Singh", title: "AI Policy Expert", company: "Tech Policy Foundation" },
-      { name: "Elena Rodriguez", title: "AI Researcher", company: "Innovation Lab" }
-    ],
-    venue: "Conference Hall A, IIEST Shibpur",
+    duration: "1 hour",
+    speakers: [],
+    venue: "IIEST Shibpur",
     capacity: "300 attendees",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
   },
   {
-    id: "keynote-2",
-    title: "Keynote Session 2",
-    type: "Keynote",
-    description: "Closing keynote on 'Building Billion-Dollar Startups from Tier-2 Cities'.",
-    fullDescription: "Learn from successful entrepreneurs who have built billion-dollar companies from non-metro cities. Discover strategies for leveraging local advantages, accessing global markets, and scale operations with limited resources.",
-    time: "10:00 AM",
-    day: "Day 2",
-    duration: "45 minutes",
-    speakers: [
-      { name: "Arjun Mehta", title: "Founder & CEO", company: "StartupXYZ (Unicorn)" },
-      { name: "Neha Gupta", title: "Venture Capitalist", company: "Tier-2 VC Fund" }
-    ],
-    venue: "Main Auditorium, IIEST Shibpur",
+    id: "sharktank",
+    title: "Shark Tank",
+    type: "Competition",
+    description: "Pitch your startup ideas to a panel of investors in a high-stakes Shark Tank format.",
+    fullDescription: "Experience the thrill of pitching your business idea in a live Shark Tank-style session. Face tough questions from a panel of investors and entrepreneurs, and compete for investment, mentorship, and recognition.",
+    time: "6:15 PM – 7:45 PM",
+    day: "Day 1",
+    duration: "90 mins",
+    speakers: [],
+    venue: "IIEST Shibpur",
     capacity: "500 attendees",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
   },
+  // ── Day 2 ──
   {
-    id: "panel-2",
-    title: "Panel Discussion 2",
-    type: "Panel Discussion",
-    description: "Discussion: 'Women Founders — Breaking the Glass Ceiling in Tech'.",
-    fullDescription: "Celebrating women founders who are breaking barriers and building successful tech companies. Hear their stories of challenges, triumphs, and lessons learned on the path to building billion-dollar enterprises.",
-    time: "2:00 PM",
+    id: "masterclass",
+    title: "Masterclass",
+    type: "Workshop",
+    description: "An exclusive masterclass session with industry experts sharing deep insights.",
+    fullDescription: "A premium masterclass session where industry veterans share in-depth knowledge, strategies, and frameworks. Get actionable insights from the best in the business.",
+    time: "10:30 AM – 11:30 AM",
     day: "Day 2",
-    duration: "60 minutes",
-    speakers: [
-      { name: "Deepika Rao", title: "Founder & CEO", company: "WomenTech Innovations" },
-      { name: "Priya Sharma", title: "Investor", company: "Female Founders Fund" },
-      { name: "Amrita Singh", title: "Tech Leader", company: "TechGuru Solutions" }
-    ],
-    venue: "Conference Hall A, IIEST Shibpur",
+    duration: "45 mins",
+    speakers: [],
+    venue: "IIEST Shibpur",
     capacity: "300 attendees",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
   },
   {
-    id: "expo",
-    title: "Startup Expo & Drone/Auto Expo",
-    type: "Exhibition",
-    description: "Exhibition hall where 50+ startups showcase products alongside drone and auto exhibitions.",
-    fullDescription: "Explore an exclusive exhibition featuring 50+ innovative startups, cutting-edge drone technologies, and autonomous vehicle showcases. Network with founders, investors, and industry leaders all in one place.",
-    time: "All Day",
-    day: "Day 1 & 2",
-    duration: "Full Event",
+    id: "alumni-panel",
+    title: "Alumni Panel Discussion",
+    type: "Panel Discussion",
+    description: "Distinguished alumni share their journeys, insights, and advice with current students.",
+    fullDescription: "A special panel discussion featuring distinguished IIEST alumni. Hear their career journeys, entrepreneurial experiences, and invaluable advice for current students entering the professional world.",
+    time: "11:30 AM – 12:30 PM",
+    day: "Day 2",
+    duration: "1 hour",
     speakers: [],
-    venue: "Exhibition Grounds, IIEST Shibpur",
-    capacity: "Unlimited",
+    venue: "IIEST Shibpur",
+    capacity: "300 attendees",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
+  },
+  {
+    id: "casex-event",
+    title: "CaseX",
+    type: "Competition",
+    description: "Real-world consulting case study competition — analyze, strategize, and present.",
+    fullDescription: "CaseX is a case study competition that simulates real-world consulting problem solving. Teams analyze a business problem, develop structured solutions, and present their findings to a panel of judges.",
+    time: "12:30 PM – 2:00 PM",
+    day: "Day 2",
+    duration: "75 mins",
+    speakers: [],
+    venue: "IIEST Shibpur",
+    capacity: "200 attendees",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
+  },
+  {
+    id: "vibebuild-demo",
+    title: "VibeBuild Demonstration",
+    type: "Showcase",
+    description: "Live demonstration of AI-powered SaaS products built during the VibeBuild challenge.",
+    fullDescription: "Watch teams demonstrate the SaaS products they built during the VibeBuild AI Product Challenge. See first-hand how AI agents and modern development tools are used to rapidly prototype and deploy innovative products.",
+    time: "2:30 PM – 3:30 PM",
+    day: "Day 2",
+    duration: "60 mins",
+    speakers: [],
+    venue: "IIEST Shibpur",
+    capacity: "300 attendees",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
+  },
+  {
+    id: "startup-roundtable",
+    title: "Startup Roundtable",
+    type: "Networking",
+    description: "Intimate roundtable discussions with startup founders, mentors, and investors.",
+    fullDescription: "An interactive roundtable format bringing together startup founders, mentors, and investors for focused discussions on growth strategies, fundraising, scaling, and the startup ecosystem.",
+    time: "4:00 PM – 5:30 PM",
+    day: "Day 2",
+    duration: "60 mins",
+    speakers: [],
+    venue: "IIEST Shibpur",
+    capacity: "150 attendees",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
+  },
+  {
+    id: "creator-conclave",
+    title: "Creator Conclave",
+    type: "Summit",
+    description: "Digital influencers and content creators come together for an immersive conclave.",
+    fullDescription: "The Creator Conclave brings together digital influencers, content creators, and brand partners for an immersive session covering content strategy, monetization, audience growth, and the evolving creator economy.",
+    time: "5:30 PM – 7:30 PM",
+    day: "Day 2",
+    duration: "2 hours",
+    speakers: [],
+    venue: "IIEST Shibpur",
+    capacity: "400 attendees",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
+  },
+  {
+    id: "main-speaker",
+    title: "Main Speaker",
+    type: "Keynote",
+    description: "The headline keynote address to close E-Summit'26 on an inspiring note.",
+    fullDescription: "The headline keynote session featuring a distinguished speaker addressing the audience with insights, inspiration, and a powerful closing message for E-Summit'26.",
+    time: "7:30 PM – 8:30 PM",
+    day: "Day 2",
+    duration: "1 hour",
+    speakers: [],
+    venue: "IIEST Shibpur",
+    capacity: "500 attendees",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
   }
 ];
@@ -444,7 +567,7 @@ export const TEAM_STRUCTURE = [
     members: {
       "4th": [],
       "3rd": [
-        { name: "Shivintya", dept: "ME" },
+        { name: "Shivnitya", dept: "ME" },
       ],
       "2nd": [],
     },
@@ -456,6 +579,7 @@ export const TEAM_STRUCTURE = [
       "3rd": [
         { name: "Yash Mahajan", dept: "CST" },
         { name: "Surya Pratap Singh", dept: "IT" },
+        { name: "Shivnitya", dept: "ME" },
       ],
       "2nd": [],
     },
@@ -483,7 +607,7 @@ export const TEAM_STRUCTURE = [
       "4th": [{ name: "Amritesh Kumar", dept: "IT" },],
       "3rd": [
         { name: "Yasharth Shukla", dept: "CST" },
-        { name: "Shivintya", dept: "ME" },
+        { name: "Shivnitya", dept: "ME" },
       ],
       "2nd": [
         { name: "Vishal Kumar Swain", dept: "CST" },

@@ -6,6 +6,7 @@ import {
   useTransform,
 } from "framer-motion";
 import { ArrowRight, FileText } from "lucide-react";
+import { Link } from "react-router-dom";
 import ParticleCanvas from "@/components/ParticleCanvas";
 import logo from "@/assets/logo-esumm1.png";
 
@@ -69,11 +70,20 @@ const MagneticButton = ({ children }: any) => {
   );
 };
 
-const CountdownBox = ({ value }: { value: number }) => (
+const CountdownBox = ({ value, label }: { value: number; label: string }) => (
   <div className="text-center">
-    <div className="text-2xl sm:text-3xl md:text-5xl font-bold text-primary">
+    <div className="text-3xl sm:text-4xl md:text-6xl font-bold text-primary drop-shadow-[0_0_15px_rgba(30,144,255,0.4)]">
       {String(value).padStart(2, "0")}
     </div>
+    <div className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-widest mt-1 opacity-70">
+      {label}
+    </div>
+  </div>
+);
+
+const Separator = () => (
+  <div className="text-2xl md:text-4xl text-primary font-bold opacity-30 mt-[-1rem] md:mt-[-1.5rem]">
+    :
   </div>
 );
 
@@ -147,13 +157,18 @@ const Hero = () => {
           {/* CTA */}
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <MagneticButton>
-              <a className="px-5 py-2.5 sm:px-8 sm:py-4 rounded-xl bg-gradient-to-r from-primary to-secondary text-white font-semibold text-sm sm:text-base flex items-center gap-2 shadow-2xl w-full sm:w-auto justify-center">
+              <Link to="/networking" className="px-5 py-2.5 sm:px-8 sm:py-4 rounded-xl bg-gradient-to-r from-primary to-secondary text-white font-semibold text-sm sm:text-base flex items-center gap-2 shadow-2xl w-full sm:w-auto justify-center">
                 Explore Events <ArrowRight />
-              </a>
+              </Link>
             </MagneticButton>
 
             <MagneticButton>
-              <a className="px-5 py-2.5 sm:px-8 sm:py-4 rounded-xl border border-white/20 backdrop-blur-xl hover:bg-white/10 flex items-center gap-2 w-full sm:w-auto justify-center text-sm sm:text-base">
+              <a 
+                href="https://drive.google.com/file/d/1bVsGNAGmtyfXE9KeARTVpyecteWLZq9e/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2.5 sm:px-8 sm:py-4 rounded-xl border border-white/20 backdrop-blur-xl hover:bg-white/10 flex items-center gap-2 w-full sm:w-auto justify-center text-sm sm:text-base cursor-pointer"
+              >
                 <FileText /> Brochure
               </a>
             </MagneticButton>
@@ -170,21 +185,24 @@ const Hero = () => {
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
-            className="absolute w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] border border-primary/20 rounded-full"
+            className="absolute w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:w-[450px] md:h-[450px] border border-primary/20 rounded-full"
           />
 
           {/* COUNTDOWN */}
           <div className="relative backdrop-blur-2xl bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-10 shadow-[0_0_60px_rgba(0,0,0,0.6)]">
 
-            <h3 className="text-center text-primary tracking-widest mb-6">
+            <h3 className="text-center text-primary tracking-[0.3em] font-medium text-xs md:text-sm mb-8 opacity-80">
               LAUNCHING IN
             </h3>
 
-            <div className="flex gap-4 justify-center">
-              <CountdownBox value={days} />
-              <CountdownBox value={hours} />
-              <CountdownBox value={mins} />
-              <CountdownBox value={secs} />
+            <div className="flex gap-2 sm:gap-4 md:gap-6 justify-center items-center">
+              <CountdownBox value={days} label="Days" />
+              <Separator />
+              <CountdownBox value={hours} label="Hours" />
+              <Separator />
+              <CountdownBox value={mins} label="Mins" />
+              <Separator />
+              <CountdownBox value={secs} label="Secs" />
             </div>
           </div>
 
