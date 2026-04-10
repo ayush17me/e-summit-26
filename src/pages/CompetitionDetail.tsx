@@ -27,8 +27,8 @@ const CompetitionDetail = () => {
   const eligibility = Array.isArray(competition.eligibility)
     ? competition.eligibility
     : competition.eligibility
-    ? [competition.eligibility]
-    : [];
+      ? [competition.eligibility]
+      : [];
 
   const rounds = competition.rounds ?? [];
   const submission = competition.submission ?? [];
@@ -41,10 +41,10 @@ const CompetitionDetail = () => {
     <Layout>
       {/* Hero Section */}
       <section className="relative h-96 md:h-[500px] overflow-hidden">
-       
+
         <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-background to-background" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background" />
-        
+
         <motion.button
           onClick={() => navigate("/competitions")}
           className="absolute top-6 left-6 z-20 flex items-center gap-2 px-4 py-2 rounded-lg bg-background/80 hover:bg-background/95 backdrop-blur-sm transition-all border border-white/10"
@@ -84,13 +84,13 @@ const CompetitionDetail = () => {
               <p className="text-xs text-muted-foreground mb-1">Team Size</p>
               <p className="font-semibold text-sm">{competition.teamSize}</p>
             </div>
-            
+
             <div className="glass rounded-xl p-4 text-center">
               <Trophy size={24} className="mx-auto mb-2 text-secondary" />
               <p className="text-xs text-muted-foreground mb-1">Prize Pool</p>
               <p className="font-semibold text-sm">{competition.prizePool.split("+")[0].trim()}</p>
             </div>
-            
+
             <div className="glass rounded-xl p-4 text-center">
               <Calendar size={24} className="mx-auto mb-2 text-primary" />
               <p className="text-xs text-muted-foreground mb-1">Deadline</p>
@@ -111,7 +111,7 @@ const CompetitionDetail = () => {
                   }
                 }}
               >
-                Download
+                Check
               </motion.button>
             </div>
           </motion.div>
@@ -300,9 +300,18 @@ const CompetitionDetail = () => {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.5 }}
                   >
-                    <Button variant="outline" className="gap-2">
-                      <Download size={18} />
-                      Download Rulebook
+                    <Button 
+                      variant="outline" 
+                      className="gap-2"
+                      disabled={!competition.rulebookLink}
+                      onClick={() => {
+                        if (competition.rulebookLink) {
+                          window.open(competition.rulebookLink, "_blank");
+                        }
+                      }}
+                    >
+                      <FileText size={18} />
+                      Check Rulebook
                     </Button>
                   </motion.div>
                 </motion.div>
@@ -318,10 +327,20 @@ const CompetitionDetail = () => {
                 >
                   <h2 className="text-2xl md:text-3xl font-heading font-bold mb-2">Register Now</h2>
                   <p className="text-muted-foreground mb-8">
-                    Secure your spot in {competition.name}. Fill out the form below to register your team.
+                    Secure your spot in {competition.name}.
                   </p>
-                  
-                  <RegistrationForm competition={competition} />
+
+                  {competition.registrationLink ? (
+                    <Button
+                      size="lg"
+                      className="w-full sm:w-auto"
+                      onClick={() => window.open(competition.registrationLink, "_blank")}
+                    >
+                      Register Now
+                    </Button>
+                  ) : (
+                    <RegistrationForm competition={competition} />
+                  )}
                 </motion.div>
               </TabsContent>
             </Tabs>

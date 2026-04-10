@@ -77,7 +77,8 @@ export const COMPETITIONS = [
     prizePool: "Up to ₹8,00,000 funding + incubation",
     deadline: "12 April, 11:59 PM",
 
-    rulebookLink: "",
+    rulebookLink: "https://drive.google.com/file/d/1n867dz5majF5ZJV2VSh9FZclsVzYDMj2/view?usp=sharing",
+    registrationLink: "https://forms.gle/537NoKVGQCZqa1DG6",
 
     keyFeatures: [
       "Funding up to ₹8 Lakhs",
@@ -156,9 +157,9 @@ export const COMPETITIONS = [
   {
     id: "case-x",
     name: "CaseX – Case Study Competition",
-    tagline: "Solve real-world business problems & win internships",
+    tagline: "Simulate real-world consulting problem solving",
     description:
-      "A case study competition where participants work on real company problems, analyze data, and propose strategic solutions. Top performers may receive internship opportunities.",
+      "CaseX is designed to simulate real-world consulting problem solving, where student teams analyze a business problem and propose structured, actionable solutions. We aim to collaborate with your organization by curating a case problem statement based on your industry, allowing participants to work on practical challenges with real-world relevance.",
 
     teamSize: "To Be Announced",
     prizePool: "₹7,000 + Internship Opportunities",
@@ -167,14 +168,34 @@ export const COMPETITIONS = [
     rulebookLink: "",
 
     keyFeatures: [
-      "Real Company Case Studies",
-      "Business Strategy Development",
-      "Presentation to Judges",
-      "Internship Opportunities"
+      "Real-world consulting simulation",
+      "Industry-specific problem statements",
+      "Structured analysis and presentation",
+      "Actionable solution proposals"
+    ],
+    
+    submission: [
+      "Problem Understanding & Context - Clear articulation of the problem and key challenges",
+      "Market & Industry Analysis - Market overview, trends, and competitor landscape",
+      "Customer Segmentation & Insights - Target users and key pain points",
+      "Root Cause Analysis - Identifying underlying issues driving the problem",
+      "Solution Strategy - Clear, actionable recommendations",
+      "Implementation Plan - Strategic roadmap with execution steps",
+      "Business Model & Impact - Revenue model, expected outcomes",
+      "Risk & Mitigation - Potential challenges and contingency plans"
     ],
 
     rulesDescription:
-      "Participants will be provided with real-world business cases that require in-depth analysis and strategic thinking. Teams must submit structured solutions followed by a final presentation. Evaluation will focus on problem understanding, feasibility of solution, analytical depth, and presentation skills.",
+      "Sample Problem Statement:\nPlastic packaging waste remains a critical environmental challenge in India, with a significant portion ending up in landfills or as unmanaged waste. While multiple solutions exist, reuse-based packaging systems are emerging as a promising pathway toward circularity.\n\nWith evolving regulatory frameworks such as the Plastic Waste Management Rules, brands are now required to meet defined reuse targets, particularly for rigid packaging.\n\nHowever, despite its potential, large-scale adoption of reusable packaging systems remains limited due to challenges in logistics, consumer behavior, cost structures, and operational feasibility.\n\nYour Challenge - As a consulting team, design a scalable, economically viable, and consumer-friendly reuse system for plastic packaging in India.",
+
+    evaluationCriteria: [
+      "Problem understanding and clarity",
+      "Structured and logical approach",
+      "Depth of analysis",
+      "Feasibility and practicality of solutions",
+      "Creativity and innovation",
+      "Clarity of presentation"
+    ],
 
     mainImage:
       "/caseX.png",
