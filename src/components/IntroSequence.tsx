@@ -89,7 +89,8 @@ export default function IntroSequence({ onComplete }: IntroSequenceProps) {
           <video
             ref={videoRef}
             src="/intro-sequence.mp4"
-            className="w-full h-full object-cover"
+            /* Increased scale to push corner watermarks out of the viewport */
+            className="w-full h-full object-cover scale-[1.08] origin-center"
             autoPlay
             muted
             playsInline
@@ -97,6 +98,8 @@ export default function IntroSequence({ onComplete }: IntroSequenceProps) {
             onEnded={handleEnded}
             onLoadedMetadata={handleLoadedMetadata}
           />
+          {/* Subtle gradient overlay at bottom right corner just in case scale isn't enough */}
+          <div className="absolute bottom-0 right-0 w-32 md:w-48 h-20 bg-gradient-to-tl from-black via-black/80 to-transparent pointer-events-none" />
         </motion.div>
       )}
     </AnimatePresence>
