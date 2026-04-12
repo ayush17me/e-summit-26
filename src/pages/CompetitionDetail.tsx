@@ -40,10 +40,28 @@ const CompetitionDetail = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative h-96 md:h-[500px] overflow-hidden">
+      <section className="relative h-96 md:h-[500px] overflow-hidden bg-background">
 
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-background to-background" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background" />
+        {competition.bannerImage ? (
+          <>
+            <motion.img 
+              initial={{ scale: 1.05, opacity: 0 }}
+              animate={{ scale: 1, opacity: 0.6 }}
+              transition={{ duration: 0.8 }}
+              src={competition.bannerImage}
+              alt="Competition Banner"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            {/* Blend gradients for the banner */}
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-transparent to-transparent" />
+          </>
+        ) : (
+          <>
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-background to-background" />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background" />
+          </>
+        )}
 
         <motion.button
           onClick={() => navigate("/competitions")}

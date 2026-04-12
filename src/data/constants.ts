@@ -15,9 +15,9 @@ export const NAV_LINKS = [
 
 // ── About Stats ──
 export const STATS = [
-  { label: "Attendees", value: 7000, suffix: "+" },
+  { label: "Attendees", value: 5000, suffix: "+" },
   { label: "Startups & Investors", value: 50, suffix: "+" },
-  { label: "Speakers", value: 10, suffix: "+" },
+  { label: "Speakers", value: 15, suffix: "+" },
 ];
 
 // ── Bento Grid Tracks ──
@@ -32,37 +32,47 @@ export const TRACKS = [
 
 // ── Past Speakers ──
 export const SPEAKERS = [
-  { name: "Shruti Reddy", title: "Founder & CEO, Anthyesti Funeral Services", image: "" },
-  { name: "Debarya Dutta", title: "Founder-CEO, Upraised", image: "" },
-  { name: "Ranjan Mistry", title: "Social Entrepreneur", image: "" },
-  { name: "Swaroop Prasad Ghosh", title: "Director, MAKAIAS", image: "" },
-  { name: "Aaqib Hussain", title: "Founding Partner, Freeflow Venture Builders", image: "" },
-  { name: "Ankit Prasad", title: "Founder & CEO, Bobble AI", image: "" },
-  { name: "Tanya Khanijow", title: "Travel Vlogger", image: "" },
-  { name: "Sumit Gupta", title: "Co-Founder, Infimonk", image: "" },
-  { name: "Ranjan Das", title: "Chairman, The Strategy Academy", image: "" },
-  { name: "Kiran Verma", title: "Founder, Simply Blood", image: "" },
+  { name: "Satish Ray", title: "Entrepreneur & Mentor", image: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775932699/Satish_Ray_mnqwd9.png" },
+  { name: "Swaroop Prasad Ghosh", title: "Director, MAKAIAS", image: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775932699/Swaroop_Prasad_Ghosh_jawkxr.png" },
+  { name: "Sharad Sagar", title: "Social Entrepreneur & Changemaker", image: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775932699/Sharad_SagarR_lote11.png" },
+  { name: "Kiran Dutta", title: "Business Leader", image: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775932698/Kiran_Dutta_nf2904.png" },
+  { name: "Ranjan Mistry", title: "Social Entrepreneur", image: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775932698/Ranjan_MistrY_qgkefj.png" },
+  { name: "Avelo Roy", title: "Founder, Webchutney", image: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775932698/Avelo_Roy_md5cyb.png" },
+  { name: "Aaquib Hussain", title: "Founding Partner, Freeflow Venture Builders", image: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775932698/Aaquib_Hussain_mieshm.png" },
+  { name: "Debarya Dutta", title: "Founder-CEO, Upraised", image: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775932697/Debarya_Dutta_umwtyu.png" },
+  { name: "Sumit Gupta", title: "Co-founder & CEO, CoinDCX", image: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775941747/Sumit_Gupta_d0uzcm.png" },
+  { name: "Ranjan Das", title: "Entrepreneur & Business Leader", image: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775941746/Ranjan_Das_qc6ecn.png" },
+  { name: "Mahua Hom Choudhary", title: "Scientist & Nodal Officer, TIFAC", image: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775941745/Mahua_Hom_Choudhary_s02lzl.png" },
+  { name: "Kiran Verma", title: "Founder, Simply Blood", image: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775941729/Kiran_Verma_tzgoep.png" },
+  { name: "Ankit Prasad", title: "Founder & CEO, Bobble AI", image: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775941719/Ankit_Prasad_ftaoik.png" },
+  { name: "Vishakha Agarwal", title: "Entrepreneur & Wellness Coach", image: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775941695/Vishakha_Agarwal_ihfepz.png" },
 ];
 
 // ── Sponsors ──
 export const CURRENT_SPONSORS = [
-  { name: "NASSCOM 10000 Startups", logo: "" },
-  { name: "CoinDCX", logo: "" },
-  { name: "RedBull", logo: "https://tse1.mm.bing.net/th/id/OIP.JE5lQeQFTIDRx7xOAWzt6QHaEK?pid=Api&P=0&h=180" },
-  { name: "Freeflow", logo: "" },
+  { name: "Unstop", logo: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775943637/unstop-logo_ihonix.svg" },
+  { name: "Bharat AI", logo: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775943633/Bharat_AI_v9isd9.svg" },
+  { name: "Arosia Waters", logo: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775943632/Arosia_Waters_Logo_yvjwx7.webp" },
+  { name: "RedBull", logo: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775942711/Screenshot_2026-04-12_025042_vxnk0t.png" },
 ];
 
 export const PAST_SPONSORS = [
-  { name: "Xelp", logo: "https://placehold.co/160x60/333/999?text=Xelp" },
-  { name: "Simoco", logo: "https://placehold.co/160x60/333/999?text=Simoco" },
-  { name: "ACE Money", logo: "https://placehold.co/160x60/333/999?text=ACE+Money" },
-  { name: "Engineering Academy", logo: "https://placehold.co/160x60/333/999?text=Engg+Academy" },
-  { name: "ISOEH", logo: "https://placehold.co/160x60/333/999?text=ISOEH" },
-  { name: "Enliqui", logo: "https://placehold.co/160x60/333/999?text=Enliqui" },
-  { name: "SquashCODE", logo: "https://placehold.co/160x60/333/999?text=SquashCODE" },
-  { name: "WOW!", logo: "https://placehold.co/160x60/333/999?text=WOW!" },
-  { name: "Paharpur", logo: "https://placehold.co/160x60/333/999?text=Paharpur" },
-  { name: "Think India", logo: "https://placehold.co/160x60/333/999?text=Think+India" },
+  { name: "Paharpur", logo: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775942715/Screenshot_2026-04-12_025109_mmlzr0.png" },
+  { name: "Wow Momo", logo: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775942714/Screenshot_2026-04-12_025101_t4muof.png" },
+  { name: "Squash Code", logo: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775942712/Screenshot_2026-04-12_025051_t8crlk.png" },
+  { name: "Red Bull", logo: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775942711/Screenshot_2026-04-12_025042_vxnk0t.png" },
+  { name: "Upraised", logo: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775942710/Screenshot_2026-04-12_025036_ngo8nt.png" },
+  { name: "CoinDCX", logo: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775942708/Screenshot_2026-04-12_025027_hivtsd.png" },
+  { name: "Think India", logo: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775942707/Screenshot_2026-04-12_025021_vbwnxs.png" },
+  { name: "Freeflow Ventures", logo: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775942705/Screenshot_2026-04-12_025012_xjh6zs.png" },
+  { name: "Enliqui", logo: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775942701/Screenshot_2026-04-12_025003_kvbrcw.png" },
+  { name: "ISOEH", logo: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775942700/Screenshot_2026-04-12_024955_nziqye.png" },
+  { name: "Moneypot", logo: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775942699/Screenshot_2026-04-12_024944_xmwlku.png" },
+  { name: "ACE", logo: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775942697/Screenshot_2026-04-12_024933_xvitsa.png" },
+  { name: "10000 STARTUPS", logo: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775942696/Screenshot_2026-04-12_024919_qr6glu.png" },
+  { name: "VBRIDGE", logo: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775942694/Screenshot_2026-04-12_024907_tlmohl.png" },
+  { name: "SIMOCO", logo: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775942693/Screenshot_2026-04-12_024856_ud1qn4.png" },
+  { name: "XELP", logo: "https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775942693/Screenshot_2026-04-12_024847_hhlsox.png" },
 ];
 
 export const COMPETITIONS = [
@@ -174,7 +184,7 @@ export const COMPETITIONS = [
     mainImage:
       "/creatorCompetition.png",
     bannerImage:
-      "/campus-creator-banner.png"
+      "/Banners/Campus_Creator_Banner.jpeg"
   },
 
   {
@@ -196,7 +206,7 @@ export const COMPETITIONS = [
       "Structured analysis and presentation",
       "Actionable solution proposals"
     ],
-    
+
     submission: [
       "Problem Understanding & Context - Clear articulation of the problem and key challenges",
       "Market & Industry Analysis - Market overview, trends, and competitor landscape",

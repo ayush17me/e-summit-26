@@ -57,13 +57,13 @@ const Sponsors = () => {
             {PAST_SPONSORS.map((s, index) => (
               <motion.div 
                 key={s.name} 
-                className="glass rounded-lg p-3 sm:p-4 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:border-primary/30"
+                className="glass rounded-lg p-3 sm:p-4 flex items-center justify-center transition-all duration-300 hover:border-primary/30"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.3, delay: 0.5 + index * 0.05 }}
                 whileHover={{ scale: 1.1, y: -3 }}
               >
-                <img src={s.logo} alt={s.name} className="max-h-6 sm:max-h-8 w-auto" loading="lazy" />
+                <img src={s.logo} alt={s.name} className="max-h-8 sm:max-h-10 w-auto" loading="lazy" />
               </motion.div>
             ))}
           </div>
