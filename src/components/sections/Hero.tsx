@@ -135,7 +135,9 @@ const Hero = () => {
                <div className="absolute inset-0 bg-purple-500/30 blur-[60px] rounded-full -z-10 scale-110" />
                <img 
                  src={logo} 
-                 className="w-full h-auto drop-shadow-[0_0_30px_rgba(168,85,247,0.9)] brightness-125 contrast-110" 
+                 fetchPriority="high"
+                 decoding="sync"
+                 className="w-full h-auto drop-shadow-[0_0_30px_rgba(168,85,247,0.9)] brightness-125 contrast-110 text-transparent" 
                  alt="Scintillations E-Summit 2026 Logo" 
                />
             </div>
