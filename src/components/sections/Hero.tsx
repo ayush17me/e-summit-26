@@ -130,8 +130,14 @@ const Hero = () => {
             transition={{ duration: 1 }}
             className="text-4xl sm:text-6xl md:text-8xl font-extrabold leading-tight tracking-tight flex flex-col items-center lg:items-start"
           >
-            <div className="mt-8 mb-4 relative w-72 md:w-96 lg:w-[450px] max-w-full">
-               <img src={logo} className="w-full h-auto drop-shadow-[0_0_20px_rgba(168,85,247,0.5)]" alt="Scintillations E-Summit 2026 Logo" />
+            <div className="mt-8 mb-4 relative w-80 md:w-[26rem] lg:w-[500px] max-w-full">
+               {/* Ambient glow effect behind the logo to make it pop */}
+               <div className="absolute inset-0 bg-purple-500/30 blur-[60px] rounded-full -z-10 scale-110" />
+               <img 
+                 src={logo} 
+                 className="w-full h-auto drop-shadow-[0_0_30px_rgba(168,85,247,0.9)] brightness-125 contrast-110" 
+                 alt="Scintillations E-Summit 2026 Logo" 
+               />
             </div>
           </motion.h1>
 
