@@ -6,6 +6,7 @@ import EventModal from "@/components/EventModal";
 import { ChevronRight, Mic, Calendar } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import ParticleCanvas from "@/components/ParticleCanvas";
+import { Link } from "react-router-dom";
 
 /* ── Reusable timeline for a single day ── */
 const DayTimeline = ({
@@ -36,6 +37,13 @@ const DayTimeline = ({
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
+          <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-center lg:mb-12 sm:mb-6 mb-4 w-full">
+
+            <Link to="https://unstop.com/college-fests/scitillations26-indian-institute-of-engineering-science-and-technology-iiest-shibpur-458988" className="px-4 py-4 sm:px-10 sm:py-5 rounded-full bg-gradient-to-r from-primary to-purple-600 hover:from-purple-500 hover:to-primary transition-all duration-500 text-white font-bold text-sm sm:text-lg flex items-center gap-3 shadow-[0_0_30px_rgba(168,85,247,0.6)] w-full sm:w-auto justify-center uppercase tracking-wide">
+              Register on <img src="https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775943637/unstop-logo_ihonix.svg" alt="Unstop" className="h-6 md:h-8 object-contain" />
+            </Link>
+          </div>
+
           <div className="flex items-center gap-3 mb-3">
             <Calendar className="w-6 h-6 text-primary" />
             <span
@@ -58,6 +66,7 @@ const DayTimeline = ({
               background: `linear-gradient(90deg, ${accentFrom}, ${accentTo})`,
             }}
           />
+
         </motion.div>
 
         {/* Timeline */}
@@ -76,9 +85,8 @@ const DayTimeline = ({
               initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.15 }}
-              className={`relative flex items-start mb-12 ${
-                i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              }`}
+              className={`relative flex items-start mb-12 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                }`}
             >
               {/* Dot */}
               <motion.div
@@ -89,9 +97,8 @@ const DayTimeline = ({
               />
 
               <div
-                className={`ml-12 md:ml-0 md:w-1/2 ${
-                  i % 2 === 0 ? "md:pr-12" : "md:pl-12"
-                }`}
+                className={`ml-12 md:ml-0 md:w-1/2 ${i % 2 === 0 ? "md:pr-12" : "md:pl-12"
+                  }`}
               >
                 <motion.div
                   className="glass rounded-xl p-5 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all cursor-pointer group"
@@ -214,11 +221,10 @@ const NetworkingPage = () => {
           <div className="glass p-1.5 rounded-2xl flex items-center gap-2">
             <button
               onClick={() => setActiveDay(1)}
-              className={`flex-1 py-3 px-6 rounded-xl font-heading font-bold transition-all duration-300 relative overflow-hidden group ${
-                activeDay === 1
-                  ? "text-white"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
+              className={`flex-1 py-3 px-6 rounded-xl font-heading font-bold transition-all duration-300 relative overflow-hidden group ${activeDay === 1
+                ? "text-white"
+                : "text-muted-foreground hover:text-foreground"
+                }`}
             >
               {activeDay === 1 && (
                 <motion.div
@@ -234,11 +240,10 @@ const NetworkingPage = () => {
             </button>
             <button
               onClick={() => setActiveDay(2)}
-              className={`flex-1 py-3 px-6 rounded-xl font-heading font-bold transition-all duration-300 relative overflow-hidden group ${
-                activeDay === 2
-                  ? "text-white"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
+              className={`flex-1 py-3 px-6 rounded-xl font-heading font-bold transition-all duration-300 relative overflow-hidden group ${activeDay === 2
+                ? "text-white"
+                : "text-muted-foreground hover:text-foreground"
+                }`}
             >
               {activeDay === 2 && (
                 <motion.div
@@ -280,7 +285,7 @@ const NetworkingPage = () => {
             accentFrom="hsl(199, 89%, 48%)"
             accentTo="hsl(162, 73%, 46%)"
             onSelectEvent={setSelectedEvent}
-            />
+          />
         )}
       </motion.div>
 

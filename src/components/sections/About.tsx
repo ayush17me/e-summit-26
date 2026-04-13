@@ -50,18 +50,18 @@ const About = () => {
           >
             <div className="aspect-[4/3] rounded-2xl overflow-hidden relative shadow-2xl shadow-primary/10">
               <div className="relative w-full h-full group overflow-hidden">
-  <motion.img
-    src={img}
-    alt="E-Summit Event"
-    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-    loading="lazy"
-    whileHover={{ scale: 1.05 }}
-  />
-</div>
+                <motion.img
+                  src={img}
+                  alt="E-Summit Event"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
+                  whileHover={{ scale: 1.05 }}
+                />
+              </div>
 
 
               <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-secondary/30 mix-blend-multiply" />
-              <motion.div 
+              <motion.div
                 className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
               />
             </div>
@@ -78,13 +78,17 @@ const About = () => {
               About <span className="text-gradient">Esummit</span>
             </h2>
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-              E-Summit'26 is the annual flagship event of the Entrepreneurship Development Cell, IIEST Shibpur, aimed at fostering entrepreneurial initiatives among students and aspiring entrepreneurs. It brings together 10,000+ attendees, 50+ startups & investors, and 20+ industry leaders.
+              E-Summit'26 is the annual flagship event of the{" "}
+
+              {" "}IIEST Shibpur, aimed at fostering entrepreneurial initiatives among students and aspiring entrepreneurs. It brings together 10,000+ attendees, 50+ startups & investors, and 20+ industry leaders.
             </p>
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
               From high-stakes competitions like Envisage and Hackstart, to keynotes, panel discussions, a creators conclave, and the Startup & Drone/Auto Expo — E-Summit is where ideas meet opportunity.
             </p>
-            <p className="text-xs sm:text-sm text-muted-foreground/70 leading-relaxed">
-              IIEST Shibpur, established in 1856, is one of the oldest and most prestigious technical institutions in Asia. The Entrepreneurship Development Cell (EDC) works to nurture innovation and startup culture on campus.
+            <p className="text-xs sm:text-sm text-muted-foreground/70 leading-relaxed flex flex-wrap items-center gap-1">
+              IIEST Shibpur, established in 1856, is one of the oldest and most prestigious technical institutions in Asia. The{" "}
+
+              {" "}(EDC) works to nurture innovation and startup culture on campus.
             </p>
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -105,9 +109,9 @@ const About = () => {
           className="mt-12 sm:mt-16 md:mt-20 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6"
         >
           {STATS.map((stat, index) => (
-            <motion.div 
-              key={stat.label} 
-              className="glass rounded-xl p-3 sm:p-4 md:p-6 text-center hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10" 
+            <motion.div
+              key={stat.label}
+              className="glass rounded-xl p-3 sm:p-4 md:p-6 text-center hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
               style={{ animationDelay: `${index * 0.2}s` }}
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}

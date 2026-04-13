@@ -37,15 +37,6 @@ export default function IntroSequence({ onComplete }: IntroSequenceProps) {
   const handleTimeUpdate = () => {
     if (!videoRef.current) return;
     
-    // Dynamic playback speed logic
-    // The first 5 seconds of the original video are build-up -> play fast (2.25x)
-    // After 5 seconds, the explosion starts -> slow down to cinematic speed (1.25x)
-    if (videoRef.current.currentTime < 5.0) {
-      videoRef.current.playbackRate = 2.25;
-    } else {
-      videoRef.current.playbackRate = 1.25;
-    }
-
     // Morph transition trigger
     const remainingTime = videoRef.current.duration - videoRef.current.currentTime;
     if (remainingTime < 1.0 && !isVideoFinished) { // Start fading out 1 second before end
@@ -67,10 +58,7 @@ export default function IntroSequence({ onComplete }: IntroSequenceProps) {
   };
 
   const handleLoadedMetadata = () => {
-    if (videoRef.current) {
-      // Just ensure we start fast
-      videoRef.current.playbackRate = 2.25;
-    }
+    // No longer manipulating playback rate for the new video
   };
 
   return (
@@ -88,7 +76,7 @@ export default function IntroSequence({ onComplete }: IntroSequenceProps) {
         >
           <video
             ref={videoRef}
-            src="/intro-sequence.mp4"
+            src="https://res.cloudinary.com/diq6oo9ue/video/upload/q_auto/f_auto/v1776027871/shard-reference_roomlc.mp4"
             /* Increased scale to push corner watermarks out of the viewport */
             className="w-full h-full object-cover scale-[1.08] origin-center"
             autoPlay

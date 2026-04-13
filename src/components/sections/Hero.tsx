@@ -112,7 +112,7 @@ const Hero = () => {
       onMouseMove={move}
       className="relative min-h-screen flex items-center overflow-hidden px-4 py-24 sm:py-28 md:py-0"
     >
-           
+
       {/* 3D SHARD BACKGROUND */}
       <ShardBackground />
 
@@ -131,46 +131,54 @@ const Hero = () => {
             className="text-4xl sm:text-6xl md:text-8xl font-extrabold leading-tight tracking-tight flex flex-col items-center lg:items-start"
           >
             <div className="mt-8 mb-4 relative w-80 md:w-[26rem] lg:w-[500px] max-w-full">
-               {/* Ambient glow effect behind the logo to make it pop */}
-               <div className="absolute inset-0 bg-purple-500/30 blur-[60px] rounded-full -z-10 scale-110" />
-               <img 
-                 src={logo} 
-                 fetchPriority="high"
-                 decoding="sync"
-                 className="w-full h-auto drop-shadow-[0_0_30px_rgba(168,85,247,0.9)] brightness-125 contrast-110 text-transparent" 
-                 alt="Scintillations E-Summit 2026 Logo" 
-               />
+              {/* Ambient glow effect behind the logo to make it pop */}
+              <div className="absolute inset-0 bg-purple-500/30 blur-[60px] rounded-full -z-10 scale-110" />
+              <img
+                src={logo}
+                fetchPriority="high"
+                decoding="sync"
+                className="w-full h-auto drop-shadow-[0_0_30px_rgba(168,85,247,0.9)] brightness-125 contrast-110 text-transparent"
+                alt="Scintillations E-Summit 2026 Logo"
+              />
             </div>
           </motion.h1>
 
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             className="mt-4 text-xl sm:text-3xl font-bold max-w-2xl mx-auto lg:mx-0 bg-gradient-to-r from-purple-200 via-purple-100 to-purple-300 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(168,85,247,0.3)]"
           >
-            Where Ideas Explode Into Reality
-          </motion.p>
-          
-          <motion.p
+            No Noise, Just Ideas
+          </motion.p> */}
+
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="mt-6 text-sm sm:text-base text-purple-200/60 max-w-xl mx-auto lg:mx-0 font-light tracking-wide uppercase"
+            className="mt-6 flex items-center gap-3 justify-center lg:justify-start"
           >
-            Organised By Entrepreneurship Development Cell, IIEST Shibpur
-          </motion.p>
+            <span className="text-sm text-purple-200/80 font-bold tracking-wide uppercase">Organised By</span>
+            <br />
+            <img
+              src="https://res.cloudinary.com/diq6oo9ue/image/upload/v1776030798/ENTREPRENEURSHIP_DEVELOPMENT_CELL-removebg-preview_jlmtrt.png"
+              alt="Entrepreneurship Development Cell, IIEST Shibpur"
+              className="h-10 md:h-16 object-contain"
+              style={{ filter: 'drop-shadow(0 0 8px rgba(255,255,255,0.9)) drop-shadow(0 0 16px rgba(255,255,255,0.5))' }}
+            />
+          </motion.div>
+
 
           {/* CTA */}
           <div className="mt-12 flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
             <MagneticButton>
-              <Link to="/networking" className="px-8 py-4 sm:px-10 sm:py-5 rounded-full bg-gradient-to-r from-primary to-purple-600 hover:from-purple-500 hover:to-primary transition-all duration-500 text-white font-bold text-lg sm:text-xl flex items-center gap-3 shadow-[0_0_30px_rgba(168,85,247,0.6)] w-full sm:w-auto justify-center uppercase tracking-wide">
-                Register Now <ArrowRight size={24} />
+              <Link to="/events" className="px-4 py-4 sm:px-10 sm:py-5 rounded-full bg-gradient-to-r from-primary to-purple-600 hover:from-purple-500 hover:to-primary transition-all duration-500 text-white font-bold text-sm sm:text-lg flex items-center gap-3 shadow-[0_0_30px_rgba(168,85,247,0.6)] w-full sm:w-auto justify-center uppercase tracking-wide">
+                Register on <img src="https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775943637/unstop-logo_ihonix.svg" alt="Unstop" className="h-6 md:h-8 object-contain" />
               </Link>
             </MagneticButton>
 
-            <MagneticButton>
-              <a 
+            {/* <MagneticButton>
+              <a
                 href="https://drive.google.com/file/d/1bVsGNAGmtyfXE9KeARTVpyecteWLZq9e/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -178,16 +186,16 @@ const Hero = () => {
               >
                 <FileText size={24} /> Brochure
               </a>
-            </MagneticButton>
+            </MagneticButton> */}
           </div>
-          
+
         </div>
 
         {/* RIGHT */}
         <div className="relative flex justify-center items-center pointer-events-none pt-20 lg:pt-0">
 
           {/* COUNTDOWN */}
-          <div 
+          <div
             className="relative z-20 pointer-events-auto rounded-[32px] p-5 sm:p-8 scale-90 sm:scale-100"
             style={{
               background: 'rgba(15, 23, 42, 0.4)',
@@ -214,21 +222,7 @@ const Hero = () => {
           </div>
 
           {/* FLOATING GLASS CARDS */}
-          <motion.div
-            animate={{ y: [0, -20, 0] }}
-            transition={{ repeat: Infinity, duration: 5 }}
-            className="hidden sm:block absolute -top-4 sm:-top-10 -left-4 sm:-left-10 bg-white/5 backdrop-blur-xl p-3 sm:p-4 rounded-xl border border-white/10 text-sm sm:text-base z-10"
-          >
-            🚀 Speakers
-          </motion.div>
 
-          <motion.div
-            animate={{ y: [0, 20, 0] }}
-            transition={{ repeat: Infinity, duration: 6 }}
-            className="hidden sm:block absolute bottom-0 -right-4 sm:-right-10 bg-white/5 backdrop-blur-xl p-3 sm:p-4 rounded-xl border border-white/10 text-sm sm:text-base z-10"
-          >
-            🎯 Competitions
-          </motion.div>
         </div>
       </motion.div>
 

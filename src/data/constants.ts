@@ -7,9 +7,9 @@ import {
 // ── Navigation ──
 export const NAV_LINKS = [
   { label: "Competitions", href: "/competitions" },
-  { label: "Event", href: "/networking" },
+  { label: "Event", href: "/events" },
   // { label: "Creators", href: "/creators" },
-  { label: "Startup-Expo", href: "/internship" },
+  { label: "Startup-Expo", href: "/startup-expo" },
   { label: "Team", href: "/team" },
 ];
 
@@ -22,12 +22,12 @@ export const STATS = [
 
 // ── Bento Grid Tracks ──
 export const TRACKS = [
-  { title: "Competitions", description: "Envisage, Disrupt, QR Hunt, Hackstart & more — test your entrepreneurial mettle.", icon: Trophy, href: "/competitions", span: "col-span-2 row-span-2" },
-  { title: "Keynote Sessions", description: "Industry leaders sharing vision on AI, startups & Women empowerment.", icon: Mic, href: "/networking", span: "col-span-1 row-span-1" },
-  { title: "Panel Discussions", description: "Debates on AI, Ethics, and the future of entrepreneurship.", icon: MessageSquare, href: "/networking", span: "col-span-1 row-span-1" },
-  { title: "Creators Conclave", description: "Digital influencers & content creators come together.", icon: Video, href: "/networking", span: "col-span-1 row-span-2" },
+  { title: "Competitions", description: "compete in Creator championship, Vibe Build Hackathon and more.", icon: Trophy, href: "/competitions", span: "col-span-2 row-span-2" },
+  { title: "Keynote Sessions", description: "Industry leaders sharing vision on AI, startups & Women empowerment.", icon: Mic, href: "/events", span: "col-span-1 row-span-1" },
+  { title: "Panel Discussions", description: "Debates on AI, Ethics, and the future of entrepreneurship.", icon: MessageSquare, href: "/events", span: "col-span-1 row-span-1" },
+  { title: "Creators Conclave", description: "Digital influencers & content creators come together.", icon: Video, href: "/events", span: "col-span-1 row-span-2" },
   { title: "Fair & Expo", description: "Internship Fair, Startup Expo, Drone & Auto Expo — all under one roof.", icon: Briefcase, href: "/internship", span: "col-span-1 row-span-1" },
-  { title: "Workshops", description: "Hands-on sessions to build real skills in tech and business.", icon: Wrench, href: "/networking", span: "col-span-1 row-span-1" },
+  { title: "Workshops", description: "Hands-on sessions to build real skills in tech and business.", icon: Wrench, href: "/events", span: "col-span-1 row-span-1" },
 ];
 
 // ── Past Speakers ──
@@ -295,7 +295,7 @@ export const NETWORKING_EVENTS = [
     fullDescription: "A premium masterclass session where industry veterans share in-depth knowledge, strategies, and frameworks. Get actionable insights from the best in the business.",
     time: "10:30 AM – 11:30 AM",
     day: "Day 2",
-    duration: "45 mins",
+    duration: "1 hour",
     speakers: [],
     venue: "IIEST Shibpur",
     capacity: "300 attendees",
@@ -323,7 +323,7 @@ export const NETWORKING_EVENTS = [
     fullDescription: "CaseX is a case study competition that simulates real-world consulting problem solving. Teams analyze a business problem, develop structured solutions, and present their findings to a panel of judges.",
     time: "12:30 PM – 2:00 PM",
     day: "Day 2",
-    duration: "75 mins",
+    duration: "90 mins",
     speakers: [],
     venue: "IIEST Shibpur",
     capacity: "200 attendees",
@@ -337,7 +337,7 @@ export const NETWORKING_EVENTS = [
     fullDescription: "Watch teams demonstrate the SaaS products they built during the VibeBuild AI Product Challenge. See first-hand how AI agents and modern development tools are used to rapidly prototype and deploy innovative products.",
     time: "2:30 PM – 3:30 PM",
     day: "Day 2",
-    duration: "60 mins",
+    duration: "1 hour",
     speakers: [],
     venue: "IIEST Shibpur",
     capacity: "300 attendees",
@@ -351,7 +351,7 @@ export const NETWORKING_EVENTS = [
     fullDescription: "An interactive roundtable format bringing together startup founders, mentors, and investors for focused discussions on growth strategies, fundraising, scaling, and the startup ecosystem.",
     time: "4:00 PM – 5:30 PM",
     day: "Day 2",
-    duration: "60 mins",
+    duration: "90 mins",
     speakers: [],
     venue: "IIEST Shibpur",
     capacity: "150 attendees",
@@ -376,7 +376,7 @@ export const NETWORKING_EVENTS = [
     title: "Cultural Program",
     type: "Culture",
     description: "A grand cultural evening to wrap up E-Summit'26 with music, dance, and performances.",
-    fullDescription: "Celebrate the conclusion of E-Summit'26 with a grand cultural evening featuring music, dance, and creative performances by students and guest artists.",
+    fullDescription: "Celebrate the conclusion of E-Summit'26 with a grand cultural evening featuring music, dance, and creative performances by students.",
     time: "7:00 PM – 8:00 PM",
     day: "Day 2",
     duration: "1 hour",

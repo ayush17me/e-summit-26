@@ -16,15 +16,19 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center gap-2 mb-3 sm:mb-4">
-              <motion.img 
-                src={logo} 
-                alt="E-Summit 2026" 
-                className="h-8 sm:h-10" 
+              <motion.img
+                src={logo}
+                alt="E-Summit 2026"
+                className="h-8 sm:h-10"
                 whileHover={{ scale: 1.05, rotate: [0, -5, 5, 0] }}
                 transition={{ duration: 0.5 }}
               />
             </div>
-            <p className="text-xs text-primary/70 font-medium mb-2 sm:mb-3">Entrepreneurship Development Cell</p>
+            <img
+              src="https://res.cloudinary.com/diq6oo9ue/image/upload/v1776030798/ENTREPRENEURSHIP_DEVELOPMENT_CELL-removebg-preview_jlmtrt.png"
+              alt="Entrepreneurship Development Cell"
+              className="h-10 sm:h-12 object-contain mb-2 sm:mb-3"
+            />
             <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
               The annual flagship event of EDC, IIEST Shibpur — fostering entrepreneurial initiatives, empowering women in tech, and driving the AI revolution.
             </p>
@@ -40,15 +44,15 @@ const Footer = () => {
             <h4 className="font-heading font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Quick Links</h4>
             <ul className="space-y-2">
               {NAV_LINKS.map((link, index) => (
-                <motion.li 
+                <motion.li
                   key={link.href}
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: 0.2 + index * 0.05 }}
                 >
-                  <Link 
-                    to={link.href} 
+                  <Link
+                    to={link.href}
                     className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200"
                   >
                     {link.label}
@@ -67,25 +71,25 @@ const Footer = () => {
           >
             <h4 className="font-heading font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Contact</h4>
             <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-muted-foreground">
-              <motion.li 
+              <motion.li
                 className="flex items-center gap-2 hover:text-primary transition-colors duration-200"
                 whileHover={{ x: 3 }}
               >
                 <Mail size={14} /> {CONTACT_INFO.email}
               </motion.li>
-              <motion.li 
+              <motion.li
                 className="flex items-center gap-2 hover:text-primary transition-colors duration-200"
                 whileHover={{ x: 3 }}
               >
                 <Phone size={14} /> {CONTACT_INFO.phone1.name}: {CONTACT_INFO.phone1.number}
               </motion.li>
-              <motion.li 
+              <motion.li
                 className="flex items-center gap-2 hover:text-primary transition-colors duration-200"
                 whileHover={{ x: 3 }}
               >
                 <Phone size={14} /> {CONTACT_INFO.phone2.name}: {CONTACT_INFO.phone2.number}
               </motion.li>
-              <motion.li 
+              <motion.li
                 className="flex items-start gap-2 hover:text-primary transition-colors duration-200"
                 whileHover={{ x: 3 }}
               >

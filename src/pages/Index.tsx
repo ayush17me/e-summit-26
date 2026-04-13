@@ -29,7 +29,7 @@ const Index = () => {
   return (
     <>
       {showIntro && <IntroSequence onComplete={handleIntroComplete} />}
-      
+
       {/* We always render Layout so it's ready behind the video fade out, 
           but we ensure smooth transition by relying on framer-motion in IntroSequence */}
       <motion.div
@@ -43,7 +43,7 @@ const Index = () => {
           <BentoGrid />
           <Speakers />
           <Sponsors />
-          <Gallery />
+          {/* <Gallery /> */}
         </Layout>
       </motion.div>
     </>

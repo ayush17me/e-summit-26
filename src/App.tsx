@@ -27,9 +27,9 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/competitions" element={<Competitions />} />
           <Route path="/competition/:id" element={<CompetitionDetail />} />
-          <Route path="/networking" element={<Networking />} />
+          <Route path="/events" element={<Networking />} />
 
-          <Route path="/internship" element={<Internship />} />
+          <Route path="/startup-expo" element={<Internship />} />
           <Route path="/team" element={<Team />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
