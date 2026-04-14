@@ -129,12 +129,12 @@ const Hero = () => {
             initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-4xl sm:text-6xl md:text-6xl font-extrabold leading-tight tracking-tight flex flex-col items-center lg:items-start"
+            className="text-4xl sm:text-4xl md:text-6xl font-extrabold leading-tight tracking-tight flex flex-col items-center lg:items-start"
           >
             <span className="mt-4 bg-gradient-to-br from-purple-100 via-fuchsia-300 to-sky-100 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(168,85,247,0.75)]">
               Scintillations
             </span>
-            <span className="mt-3 text-xl sm:text-2xl md:text-3xl text-white/85 tracking-[0.35em] uppercase">
+            <span className="mt-3 text-xl sm:text-xl md:text-2xl text-white/85 tracking-[0.35em] uppercase">
               E-Summit 2026
             </span>
           </motion.h1>
@@ -168,7 +168,7 @@ const Hero = () => {
           {/* CTA */}
           <div className="mt-12 flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
             <MagneticButton>
-              <Link to="/events" className="px-4 py-4 sm:px-10 sm:py-5 rounded-full  bg-white/80 from-primary to-purple-600 hover:from-purple-500 hover:to-primary transition-all duration-500 text-black font-bold text-sm sm:text-lg flex items-center gap-3 shadow-[0_0_30px_rgba(168,85,247,0.6)] w-full sm:w-auto justify-center uppercase tracking-wide">
+              <Link to="/events" className="py-4 sm:px-4 sm:py-4 rounded-full  bg-white/80 from-primary to-purple-600 hover:from-purple-500 hover:to-primary transition-all duration-500 text-black font-bold text-sm sm:text-lg flex items-center gap-3 shadow-[0_0_30px_rgba(168,85,247,0.6)] w-full sm:w-auto justify-center uppercase tracking-wide">
                 Register Now <img src="https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775943637/unstop-logo_ihonix.svg" alt="Unstop" className="h-6 md:h-8 object-contain" />
               </Link>
             </MagneticButton>
