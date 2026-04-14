@@ -11,6 +11,7 @@ import Creators from "./pages/Creators";
 import Internship from "./pages/Internship";
 import Team from "./pages/Team";
 import NotFound from "./pages/NotFound";
+import Merch from "./pages/Merch";
 import logoEsumm from "@/assets/logo-esumm.png";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/competitions" element={<Competitions />} />
           <Route path="/competition/:id" element={<CompetitionDetail />} />
           <Route path="/events" element={<Networking />} />
+          <Route path="/merch" element={<Merch />} />
 
           <Route path="/startup-expo" element={<Internship />} />
           <Route path="/team" element={<Team />} />

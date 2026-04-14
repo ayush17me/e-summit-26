@@ -94,9 +94,9 @@ const About = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 hover:shadow-lg hover:shadow-primary/50 text-primary-foreground gap-2 transition-all duration-300">
+              {/* <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 hover:shadow-lg hover:shadow-primary/50 text-primary-foreground gap-2 transition-all duration-300">
                 <Download size={16} /> Download Brochure
-              </Button>
+              </Button> */}
             </motion.div>
           </motion.div>
         </div>

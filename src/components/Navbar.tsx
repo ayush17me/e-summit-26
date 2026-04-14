@@ -40,7 +40,7 @@ const Navbar = () => {
           >
             <div className="relative">
               <div className="absolute inset-0 bg-primary/20 blur-2xl rounded-full" />
-              <img src={logo} className="relative h-12 md:h-12 brightness-250 contrast-250" />
+              <img src={logo} className="relative h-8 md:h-12 brightness-250 contrast-250" />
             </div>
           </motion.div>
             {/* <p className="ml-4 pt-1 text-xs font-medium text-purple-600">IIEST Shibpur</p> */}

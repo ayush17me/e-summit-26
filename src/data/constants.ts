@@ -8,6 +8,7 @@ import {
 export const NAV_LINKS = [
   { label: "Competitions", href: "/competitions" },
   { label: "Event", href: "/events" },
+  { label: "Merch", href: "/merch" },
   // { label: "Creators", href: "/creators" },
   { label: "Startup-Expo", href: "/startup-expo" },
   { label: "Team", href: "/team" },
@@ -15,7 +16,7 @@ export const NAV_LINKS = [
 
 // ── About Stats ──
 export const STATS = [
-  { label: "Attendees", value: 5000, suffix: "+" },
+  { label: "Attendees", value: 2000, suffix: "+" },
   { label: "Startups & Investors", value: 50, suffix: "+" },
   { label: "Speakers", value: 15, suffix: "+" },
 ];
@@ -116,7 +117,7 @@ export const COMPETITIONS = [
     teamSize: "2–3 members",
     prizePool: "₹10,000",
     deadline: "To Be Announced",
-
+    registrationLink: "Coming Soon",
     rulebookLink: "",
 
     keyFeatures: [
@@ -154,6 +155,8 @@ export const COMPETITIONS = [
       "Live Event Storytelling",
       "Engagement Driven"
     ],
+    registrationLink: "https://unstop.com/p/campus-creator-championship-scitillations26-indian-institute-of-engineering-science-and-technology-iiest-shibpur-1674503",
+
 
     rulesDescription:
       "Campus Creator Championship is designed to evaluate participants on creativity, storytelling, and their ability to generate engagement under time constraints using live event environments.\n\nEvent Structure:\n1. Briefing Session: Participants will be briefed regarding rules, themes, and submission process.\n2. Content Creation Phase: Participants will create content during the event. All footage must be captured within E-Summit premises. Editing must be completed within the event duration.\n3. Submission Guidelines: Content must be uploaded as a Reel by the communicated deadline.\n\nRules & Regulations:\n• Content must be original and created during the event.\n• Use of pre-recorded or previously published content is strictly prohibited.\n• Any form of plagiarism or copyright violation will lead to disqualification.\n• The decision of the judging panel will be final and binding.",
@@ -185,6 +188,7 @@ export const COMPETITIONS = [
       "Structured analysis and presentation",
       "Actionable solution proposals"
     ],
+    registrationLink: "https://unstop.com/competitions/casex-case-study-competition-scitillations26-indian-institute-of-engineering-science-and-technology-iiest-s-1674499",
 
 
 
@@ -199,194 +203,243 @@ export const COMPETITIONS = [
   }
 ];
 
-// ── Event Schedule ──
 export const NETWORKING_EVENTS = [
-  // ── Day 1 ──
+  // ── DAY 1 ──
   {
     id: "inauguration",
     title: "Inauguration",
     type: "Ceremony",
+<<<<<<< fix/replace-em-dashes
     description: "Grand opening ceremony of E-Summit'26 - setting the stage for two days of innovation and entrepreneurship.",
     fullDescription: "The official inauguration of E-Summit'26 at IIEST Shibpur. Join us as we kick off two days of competitions, keynotes, panels, and networking with a grand opening ceremony featuring distinguished guests and dignitaries.",
+=======
+>>>>>>> main
     time: "11:00 AM",
     day: "Day 1",
-    duration: "1 hour",
-    speakers: [],
+    duration: "45 mins",
     venue: "IIEST Shibpur",
     capacity: "All attendees",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
-  },
-  {
-    id: "keynote-sessions",
-    title: "Keynote Sessions",
-    type: "Keynote",
-    description: "Industry leaders sharing insights on the future of startups, AI, and entrepreneurship.",
-    fullDescription: "Insightful keynote sessions featuring industry pioneers who share their vision on AI, startups, and the entrepreneurial landscape. Gain actionable takeaways and be inspired by leaders shaping tomorrow.",
-    time: "12:00 Noon",
-    day: "Day 1",
-    duration: "30–45 mins",
     speakers: [],
+    description: "Grand opening of E-Summit'26.",
+    fullDescription: "The official inauguration ceremony marking the beginning of E-Summit'26, setting the stage for innovation, networking, and entrepreneurship.",
+    image: "https://images.unsplash.com/photo-1503428593586-e225b39bddfe?w=800",
+    registrationLink: null
+  },
+
+  {
+    id: "keynote-1",
+    title: "Keynote Session 1",
+    type: "Keynote",
+    time: "11:45 AM – 12:15 PM",
+    day: "Day 1",
+    duration: "30 mins",
     venue: "IIEST Shibpur",
     capacity: "500 attendees",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
+    speakers: [{ name: "Debasis Sen", title: "Industry Leader", company: "" }],
+    description: "Startup & innovation insights.",
+    fullDescription: "Founders, investors, and industry leaders share insights on entrepreneurship, innovation, and real-world business challenges.",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800",
+    registrationLink: "https://unstop.com/p/keynote-session-1-scintillations26-indian-institute-of-engineering-science-and-technology-iiest-shibpur-1674965"
   },
+
   {
-    id: "bec84-pitch-event",
-    title: "BEC 84 Business Competition Pitch",
+    id: "keynote-2",
+    title: "Keynote Session 2",
+    type: "Keynote",
+    time: "12:15 PM – 12:45 PM",
+    day: "Day 1",
+    duration: "30 mins",
+    venue: "IIEST Shibpur",
+    capacity: "500 attendees",
+    speakers: [{ name: "Avelo Roy", title: "Entrepreneur", company: "" }],
+    description: "Scaling startups & business strategy.",
+    fullDescription: "A deep dive into entrepreneurship, innovation, and building scalable startups from experienced founders.",
+    image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800",
+    registrationLink: "https://unstop.com/p/keynote-session-2-scintillations26-indian-institute-of-engineering-science-and-technology-iiest-shibpur-1674968"
+  },
+
+  {
+    id: "bec84",
+    title: "BEC 84 Investor Pitch",
     type: "Competition",
-    description: "The flagship startup pitch competition under the BEC84 Angel Fund Scheme.",
-    fullDescription: "Shortlisted teams pitch their innovative tech-driven startup ideas to a panel of investors and mentors. Compete for funding up to ₹8 Lakhs, incubation support, and mentorship under the BEC84 Angel Fund Scheme.",
     time: "2:00 PM – 3:30 PM",
     day: "Day 1",
     duration: "90 mins",
-    speakers: [],
     venue: "IIEST Shibpur",
     capacity: "300 attendees",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
-  },
-  {
-    id: "workshop-1",
-    title: "Workshop 1",
-    type: "Workshop",
-    description: "Hands-on workshop to build real skills in tech and business.",
-    fullDescription: "A focused, hands-on workshop session designed to equip attendees with practical skills in technology or business. Engage with industry experts and learn by doing.",
-    time: "3:30 PM – 4:15 PM",
-    day: "Day 1",
-    duration: "45 mins",
     speakers: [],
-    venue: "IIEST Shibpur",
-    capacity: "200 attendees",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
+    description: "Flagship startup pitch competition.",
+    fullDescription: "Teams pitch innovative startup ideas to investors under the BEC84 Angel Fund Scheme, competing for funding up to ₹8 Lakhs and mentorship.",
+    image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800",
+    registrationLink: "https://unstop.com/p/bec-84-investor-pitch-scitillations26-indian-institute-of-engineering-science-and-technology-iiest-shibpur-1674670"
   },
+
   {
     id: "panel-discussion-1",
     title: "Panel Discussion 1",
     type: "Panel Discussion",
-    description: "Experts from academia and industry debate pressing topics in AI, ethics, and entrepreneurship.",
-    fullDescription: "A thought-provoking panel discussion featuring experts from diverse backgrounds debating critical questions around AI, ethics, innovation, and the future of entrepreneurship.",
-    time: "4:30 PM – 5:30 PM",
+    time: "3:30 PM – 4:30 PM",
     day: "Day 1",
     duration: "1 hour",
-    speakers: [],
     venue: "IIEST Shibpur",
     capacity: "300 attendees",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
-  },
-  {
-    id: "sharktank",
-    title: "Shark Tank",
-    type: "Competition",
-    description: "Pitch your startup ideas to a panel of investors in a high-stakes Shark Tank format.",
-    fullDescription: "Experience the thrill of pitching your business idea in a live Shark Tank-style session. Face tough questions from a panel of investors and entrepreneurs, and compete for investment, mentorship, and recognition.",
-    time: "6:15 PM – 7:45 PM",
-    day: "Day 1",
-    duration: "90 mins",
     speakers: [],
-    venue: "IIEST Shibpur",
-    capacity: "500 attendees",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
+    description: "Power panel with founders & investors.",
+    fullDescription: "Experts discuss entrepreneurship, scaling, and real-world startup challenges in India.",
+    image: "https://images.unsplash.com/photo-1515169067868-5387ec356754?w=800",
+    registrationLink: "https://unstop.com/p/panel-discussion-1-scintillations26-indian-institute-of-engineering-science-and-technology-iiest-shibpur-1674972"
   },
-  // ── Day 2 ──
+
   {
-    id: "masterclass",
-    title: "Masterclass",
+    id: "compliance-workshop",
+    title: "Compliance Workshop",
     type: "Workshop",
-    description: "An exclusive masterclass session with industry experts sharing deep insights.",
-    fullDescription: "A premium masterclass session where industry veterans share in-depth knowledge, strategies, and frameworks. Get actionable insights from the best in the business.",
-    time: "10:30 AM – 11:30 AM",
-    day: "Day 2",
-    duration: "1 hour",
-    speakers: [],
-    venue: "IIEST Shibpur",
-    capacity: "300 attendees",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
-  },
-  {
-    id: "alumni-panel",
-    title: "Alumni Panel Discussion",
-    type: "Panel Discussion",
-    description: "Distinguished alumni share their journeys, insights, and advice with current students.",
-    fullDescription: "A special panel discussion featuring distinguished IIEST alumni. Hear their career journeys, entrepreneurial experiences, and invaluable advice for current students entering the professional world.",
-    time: "11:30 AM – 12:30 PM",
-    day: "Day 2",
-    duration: "1 hour",
-    speakers: [],
-    venue: "IIEST Shibpur",
-    capacity: "300 attendees",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
-  },
-  {
-    id: "casex-event",
-    title: "CaseX",
-    type: "Competition",
-    description: "Real-world consulting case study competition - analyze, strategize, and present.",
-    fullDescription: "CaseX is a case study competition that simulates real-world consulting problem solving. Teams analyze a business problem, develop structured solutions, and present their findings to a panel of judges.",
-    time: "12:30 PM – 2:00 PM",
-    day: "Day 2",
-    duration: "90 mins",
-    speakers: [],
+    time: "4:30 PM – 5:15 PM",
+    day: "Day 1",
+    duration: "45 mins",
     venue: "IIEST Shibpur",
     capacity: "200 attendees",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
-  },
-  {
-    id: "vibebuild-demo",
-    title: "VibeBuild Demonstration",
-    type: "Showcase",
-    description: "Live demonstration of AI-powered SaaS products built during the VibeBuild challenge.",
-    fullDescription: "Watch teams demonstrate the SaaS products they built during the VibeBuild AI Product Challenge. See first-hand how AI agents and modern development tools are used to rapidly prototype and deploy innovative products.",
-    time: "2:30 PM – 3:30 PM",
-    day: "Day 2",
-    duration: "1 hour",
     speakers: [],
-    venue: "IIEST Shibpur",
-    capacity: "300 attendees",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
+    description: "Startup legal & compliance essentials.",
+    fullDescription: "Learn key legal frameworks, compliance requirements, and operational basics needed to run a startup.",
+    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800",
+    registrationLink: "https://unstop.com/p/esummit-2026-compliance-workshop-scintillations26-indian-institute-of-engineering-science-and-technology-iiest-shibpur-1674713"
   },
-  {
-    id: "startup-roundtable",
-    title: "Startup Roundtable",
-    type: "Networking",
-    description: "Intimate roundtable discussions with startup founders, mentors, and investors.",
-    fullDescription: "An interactive roundtable format bringing together startup founders, mentors, and investors for focused discussions on growth strategies, fundraising, scaling, and the startup ecosystem.",
-    time: "4:00 PM – 5:30 PM",
-    day: "Day 2",
-    duration: "90 mins",
-    speakers: [],
-    venue: "IIEST Shibpur",
-    capacity: "150 attendees",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
-  },
+
   {
     id: "creator-conclave",
     title: "Creator Conclave",
     type: "Summit",
-    description: "Digital influencers and content creators come together for an immersive conclave.",
-    fullDescription: "The Creator Conclave brings together digital influencers, content creators, and brand partners for an immersive session covering content strategy, monetization, audience growth, and the evolving creator economy.",
+    time: "5:30 PM – 8:00 PM",
+    day: "Day 1",
+    duration: "2.5 hours",
+    venue: "IIEST Shibpur",
+    capacity: "400 attendees",
+    speakers: [],
+    description: "Creator economy & personal branding.",
+    fullDescription: "Strategies on content creation, personal branding, and monetization for creators, marketers, and influencers.",
+    image: "https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=800",
+    registrationLink: "https://unstop.com/p/creator-conclave-scintillations26-indian-institute-of-engineering-science-and-technology-iiest-shibpur-1674970"
+  },
+
+  // ── DAY 2 ──
+  {
+    id: "masterclass",
+    title: "Masterclass",
+    type: "Workshop",
+    time: "10:30 AM – 11:30 AM",
+    day: "Day 2",
+    duration: "1 hour",
+    venue: "IIEST Shibpur",
+    capacity: "300 attendees",
+    speakers: [],
+    description: "Hands-on learning with experts.",
+    fullDescription: "Workshops led by industry professionals on startups, marketing, product, and business strategy.",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800",
+    registrationLink: "https://unstop.com/p/masterclass-scintillations26-indian-institute-of-engineering-science-and-technology-iiest-shibpur-1674973"
+  },
+
+  {
+    id: "alumni-panel",
+    title: "Alumni Panel Discussion",
+    type: "Panel Discussion",
+    time: "11:30 AM – 12:30 PM",
+    day: "Day 2",
+    duration: "1 hour",
+    venue: "IIEST Shibpur",
+    capacity: "300 attendees",
+    speakers: [],
+    description: "Learn from alumni journeys.",
+    fullDescription: "Distinguished alumni share career insights, startup journeys, and guidance for students.",
+    image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800",
+    registrationLink: "https://unstop.com/p/startup-roundtable-scintillations26-indian-institute-of-engineering-science-and-technology-iiest-shibpur-1674982"
+  },
+
+  {
+    id: "casex",
+    title: "CaseX Study Championship",
+    type: "Competition",
+<<<<<<< fix/replace-em-dashes
+    description: "Real-world consulting case study competition - analyze, strategize, and present.",
+    fullDescription: "CaseX is a case study competition that simulates real-world consulting problem solving. Teams analyze a business problem, develop structured solutions, and present their findings to a panel of judges.",
+=======
+>>>>>>> main
+    time: "12:30 PM – 2:00 PM",
+    day: "Day 2",
+    duration: "90 mins",
+    venue: "IIEST Shibpur",
+    capacity: "200 attendees",
+    speakers: [],
+    description: "Real-world business case competition.",
+    fullDescription: "Analyze real business problems, build strategies, and present solutions like top consultants.",
+    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800",
+    registrationLink: "https://unstop.com/competitions/casex-case-study-competition-scitillations26-indian-institute-of-engineering-science-and-technology-iiest-s-1674499"
+  },
+
+  {
+    id: "vibebuild",
+    title: "VibeBuild Demonstration",
+    type: "Showcase",
+    time: "2:30 PM – 3:30 PM",
+    day: "Day 2",
+    duration: "1 hour",
+    venue: "IIEST Shibpur",
+    capacity: "300 attendees",
+    speakers: [],
+    description: "AI product showcase.",
+    fullDescription: "Live demonstration of AI-powered SaaS products built during the VibeBuild competition.",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800",
+    registrationLink: null
+  },
+
+  {
+    id: "startup-roundtable",
+    title: "Startup Roundtable",
+    type: "Networking",
+    time: "4:00 PM – 5:30 PM",
+    day: "Day 2",
+    duration: "90 mins",
+    venue: "IIEST Shibpur",
+    capacity: "150 attendees",
+    speakers: [],
+    description: "Closed-door founder discussions.",
+    fullDescription: "Interactive discussions on fundraising, scaling, and growth strategies with founders and investors.",
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800",
+    registrationLink: "https://unstop.com/p/startup-roundtable-scintillations26-indian-institute-of-engineering-science-and-technology-iiest-shibpur-1674982"
+  },
+
+  {
+    id: "sharktank",
+    title: "Shark Tank",
+    type: "Competition",
     time: "5:30 PM – 7:00 PM",
     day: "Day 2",
     duration: "90 mins",
-    speakers: [],
     venue: "IIEST Shibpur",
-    capacity: "400 attendees",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
+    capacity: "500 attendees",
+    speakers: [],
+    description: "Pitch to real investors.",
+    fullDescription: "A high-stakes startup pitching event where participants present ideas and compete for funding and mentorship.",
+    image: "https://images.unsplash.com/photo-1559526324-593bc073d938?w=800",
+    registrationLink: "https://unstop.com/p/sharktank-scintillations26-indian-institute-of-engineering-science-and-technology-iiest-shibpur-1674983"
   },
+
   {
-    id: "cultural-program",
+    id: "cultural",
     title: "Cultural Program",
     type: "Culture",
-    description: "A grand cultural evening to wrap up E-Summit'26 with music, dance, and performances.",
-    fullDescription: "Celebrate the conclusion of E-Summit'26 with a grand cultural evening featuring music, dance, and creative performances by students.",
     time: "7:00 PM – 8:00 PM",
     day: "Day 2",
     duration: "1 hour",
-    speakers: [],
     venue: "IIEST Shibpur",
     capacity: "All attendees",
-    image: "https://images.unsplash.com/photo-1514525253361-9f9a0c240974?w=800&h=400&fit=crop"
+    speakers: [],
+    description: "Closing cultural night.",
+    fullDescription: "Celebrate the end of E-Summit with music, dance, and performances.",
+    image: "https://images.unsplash.com/photo-1514525253361-9f9a0c240974?w=800",
+    registrationLink: null
   }
 ];
-
 // ── Creators ──
 export const FEATURED_CREATORS = [
   { name: "Ankita Roy", handle: "@ankitaroy", followers: "1.2M", platform: "Instagram", image: "https://i.pravatar.cc/300?img=20" },
@@ -487,10 +540,10 @@ export const INTERNSHIP_STEPS = [
 
 // ── Contact / Social ──
 export const SOCIAL_LINKS = [
-  { name: "Instagram", icon: Instagram, href: "https://instagram.com/edc.iiests", color: "hover:text-pink-500" },
-  { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/company/edc-iiests", color: "hover:text-blue-400" },
+  { name: "Instagram", icon: Instagram, href: "https://instagram.com/esummit.iiest", color: "hover:text-pink-500" },
+  { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/company/edciiests", color: "hover:text-blue-400" },
   { name: "Twitter", icon: Twitter, href: "https://twitter.com/edc_iiests", color: "hover:text-sky-400" },
-  { name: "Website", icon: Globe, href: "https://edc-iiests.in", color: "hover:text-primary" },
+  { name: "Website", icon: Globe, href: "https://edciiests.in", color: "hover:text-primary" },
   { name: "Email", icon: Mail, href: "mailto:iiests.edc@gmail.com", color: "hover:text-primary" },
 ];
 

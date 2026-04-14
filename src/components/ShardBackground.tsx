@@ -31,7 +31,7 @@ export default function ShardBackground() {
         muted
         playsInline
         /* Increased scale to push corner watermarks out of the viewport */
-        className="w-full h-full object-cover scale-[1.08] origin-center opacity-80"
+        className="w-full h-full object-cover scale-[1.08] origin-center opacity-50"
       >
         <source src="https://res.cloudinary.com/diq6oo9ue/video/upload/q_auto/f_auto/v1776027871/shard-reference_roomlc.mp4" type="video/mp4" />
       </video>

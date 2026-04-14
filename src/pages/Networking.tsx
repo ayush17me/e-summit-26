@@ -39,7 +39,7 @@ const DayTimeline = ({
         >
           <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-center lg:mb-12 sm:mb-6 mb-4 w-full">
 
-            <Link to="https://unstop.com/college-fests/scitillations26-indian-institute-of-engineering-science-and-technology-iiest-shibpur-458988" className="px-4 py-4 sm:px-10 sm:py-5 rounded-full bg-gradient-to-r from-primary to-purple-600 hover:from-purple-500 hover:to-primary transition-all duration-500 text-white font-bold text-sm sm:text-lg flex items-center gap-3 shadow-[0_0_30px_rgba(168,85,247,0.6)] w-full sm:w-auto justify-center uppercase tracking-wide">
+            <Link to="https://unstop.com/college-fests/scitillations26-indian-institute-of-engineering-science-and-technology-iiest-shibpur-458988" className="px-4 py-4 sm:px-10 sm:py-5 rounded-full onhover:bg-purple-600 transition-all duration-500 text-white font-bold text-sm sm:text-lg flex items-center gap-3 shadow-[0_0_30px_rgba(168,85,247,0.6)] w-full sm:w-auto justify-center uppercase tracking-wide">
               Register on <img src="https://res.cloudinary.com/diq6oo9ue/image/upload/q_auto/f_auto/v1775943637/unstop-logo_ihonix.svg" alt="Unstop" className="h-6 md:h-8 object-contain" />
             </Link>
           </div>

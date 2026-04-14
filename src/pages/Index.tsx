@@ -28,14 +28,11 @@ const Index = () => {
 
   return (
     <>
-      {showIntro && <IntroSequence onComplete={handleIntroComplete} />}
+      {/* {showIntro && <IntroSequence onComplete={handleIntroComplete} />} */}
 
       {/* We always render Layout so it's ready behind the video fade out, 
           but we ensure smooth transition by relying on framer-motion in IntroSequence */}
       <motion.div
-        initial={!isReady ? { filter: "brightness(2) blur(10px)", scale: 0.95 } : false}
-        animate={isReady ? { filter: "brightness(1) blur(0px)", scale: 1 } : {}}
-        transition={{ duration: 1.2, ease: "easeOut" }}
       >
         <Layout>
           <Hero />

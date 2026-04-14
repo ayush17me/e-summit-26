@@ -21,6 +21,7 @@ interface Event {
   venue: string;
   capacity: string;
   image: string;
+  registrationLink: string;
 }
 
 interface EventModalProps {
@@ -70,7 +71,7 @@ const EventModal = ({ event, onClose }: EventModalProps) => {
                 transition={{ duration: 0.6 }}
               />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
-              
+
               {/* Event Type Badge */}
               <motion.div
                 className="absolute top-4 left-4"
@@ -199,6 +200,7 @@ const EventModal = ({ event, onClose }: EventModalProps) => {
                 >
                   <Button
                     size="lg"
+                    onClick={() => window.open(event.registrationLink, "_blank")}
                     className="w-full bg-gradient-to-r from-primary to-secondary hover:shadow-lg hover:shadow-primary/50"
                   >
                     Register for this Event
