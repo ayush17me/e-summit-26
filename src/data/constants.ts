@@ -26,7 +26,7 @@ export const TRACKS = [
   { title: "Keynote Sessions", description: "Industry leaders sharing vision on AI, startups & Women empowerment.", icon: Mic, href: "/events", span: "col-span-1 row-span-1" },
   { title: "Panel Discussions", description: "Debates on AI, Ethics, and the future of entrepreneurship.", icon: MessageSquare, href: "/events", span: "col-span-1 row-span-1" },
   { title: "Creators Conclave", description: "Digital influencers & content creators come together.", icon: Video, href: "/events", span: "col-span-1 row-span-2" },
-  { title: "Fair & Expo", description: "Internship Fair, Startup Expo, Drone & Auto Expo — all under one roof.", icon: Briefcase, href: "/internship", span: "col-span-1 row-span-1" },
+  { title: "Fair & Expo", description: "Internship Fair, Startup Expo, Drone & Auto Expo - all under one roof.", icon: Briefcase, href: "/internship", span: "col-span-1 row-span-1" },
   { title: "Workshops", description: "Hands-on sessions to build real skills in tech and business.", icon: Wrench, href: "/events", span: "col-span-1 row-span-1" },
 ];
 
@@ -498,7 +498,7 @@ export const CONTACT_INFO = {
   email: "iiests.edc@gmail.com",
   phone1: { name: "Shreyansh", number: "+91 84780 90242" },
   phone2: { name: "Abhash Jain", number: "+91 7906988259" },
-  address: "Entrepreneurship Development Cell, IIEST Shibpur, Howrah, West Bengal — 711103",
+  address: "Entrepreneurship Development Cell, IIEST Shibpur, Howrah, West Bengal - 711103",
 };
 // ── Team Structure ──
 export const TEAM_STRUCTURE = [
@@ -539,7 +539,7 @@ export const TEAM_STRUCTURE = [
     members: {
       "4th": [],
       "3rd": [
-        { name: "Shivnitya", dept: "ME" },
+        { name: "Arnav Aarit", dept: "CE" },
       ],
       "2nd": [],
     },
@@ -564,7 +564,6 @@ export const TEAM_STRUCTURE = [
       ],
       "3rd": [
         { name: "Preeti Bhargava", dept: "EE" },
-        { name: "Ankita Kumari", dept: "ME" },
       ],
       "2nd": [
         { name: "Akriti Singh", dept: "CST" },
@@ -652,7 +651,6 @@ export const TEAM_STRUCTURE = [
         { name: "Sneha Mishra", dept: "ME" },
       ],
       "2nd": [
-        { name: "Bodh Prakash", dept: "Civil" },
         { name: "Bikramjeet Dasgupta", dept: "EE" },
       ],
     },
