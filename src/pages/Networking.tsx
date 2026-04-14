@@ -196,7 +196,7 @@ const NetworkingPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Keynotes, panels, and expos — connect with leaders shaping the
+              Keynotes, panels, and expos - connect with leaders shaping the
               future.
             </motion.p>
 

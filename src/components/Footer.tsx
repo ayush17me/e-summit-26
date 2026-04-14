@@ -30,7 +30,7 @@ const Footer = () => {
               className="h-10 sm:h-12 object-contain mb-2 sm:mb-3"
             />
             <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
-              The annual flagship event of EDC, IIEST Shibpur — fostering entrepreneurial initiatives, empowering women in tech, and driving the AI revolution.
+              The annual flagship event of EDC, IIEST Shibpur - fostering entrepreneurial initiatives, empowering women in tech, and driving the AI revolution.
             </p>
           </motion.div>
 

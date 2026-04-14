@@ -79,7 +79,7 @@ const BentoGrid = () => {
           </p>
         </motion.div>
 
-        {/* Marquee wrapper — py padding so scaled-up center card isn't clipped */}
+        {/* Marquee wrapper - py padding so scaled-up center card isn't clipped */}
         <div className="overflow-hidden relative py-8" ref={containerRef}>
           {/* Fade edges */}
           <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 sm:w-24 md:w-36 lg:w-48 z-10 bg-gradient-to-r from-background via-background/75 to-transparent" />

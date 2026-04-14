@@ -83,7 +83,7 @@ const About = () => {
               {" "}IIEST Shibpur, aimed at fostering entrepreneurial initiatives among students and aspiring entrepreneurs. It brings together 10,000+ attendees, 50+ startups & investors, and 20+ industry leaders.
             </p>
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-              From high-stakes competitions like Envisage and Hackstart, to keynotes, panel discussions, a creators conclave, and the Startup & Drone/Auto Expo — E-Summit is where ideas meet opportunity.
+              From high-stakes competitions like Envisage and Hackstart, to keynotes, panel discussions, a creators conclave, and the Startup & Drone/Auto Expo - E-Summit is where ideas meet opportunity.
             </p>
             <p className="text-xs sm:text-sm text-muted-foreground/70 leading-relaxed flex flex-wrap items-center gap-1">
               IIEST Shibpur, established in 1856, is one of the oldest and most prestigious technical institutions in Asia. The{" "}

@@ -22,11 +22,11 @@ export const STATS = [
 
 // ── Bento Grid Tracks ──
 export const TRACKS = [
-  { title: "Competitions", description: "Envisage, Disrupt, QR Hunt, Hackstart & more — test your entrepreneurial mettle.", icon: Trophy, href: "/competitions", span: "col-span-2 row-span-2" },
+  { title: "Competitions", description: "Envisage, Disrupt, QR Hunt, Hackstart & more - test your entrepreneurial mettle.", icon: Trophy, href: "/competitions", span: "col-span-2 row-span-2" },
   { title: "Keynote Sessions", description: "Industry leaders sharing vision on AI, startups & Women empowerment.", icon: Mic, href: "/networking", span: "col-span-1 row-span-1" },
   { title: "Panel Discussions", description: "Debates on AI, Ethics, and the future of entrepreneurship.", icon: MessageSquare, href: "/networking", span: "col-span-1 row-span-1" },
   { title: "Creators Conclave", description: "Digital influencers & content creators come together.", icon: Video, href: "/creators", span: "col-span-1 row-span-2" },
-  { title: "Fair & Expo", description: "Internship Fair, Startup Expo, Drone & Auto Expo — all under one roof.", icon: Briefcase, href: "/internship", span: "col-span-1 row-span-1" },
+  { title: "Fair & Expo", description: "Internship Fair, Startup Expo, Drone & Auto Expo - all under one roof.", icon: Briefcase, href: "/internship", span: "col-span-1 row-span-1" },
   { title: "Workshops", description: "Hands-on sessions to build real skills in tech and business.", icon: Wrench, href: "/networking", span: "col-span-1 row-span-1" },
 ];
 
@@ -180,7 +180,7 @@ export const COMPETITIONS = [
     id: "auction",
     title: "Auction",
     description:
-      "The ultimate creative branding sprint. Design a complete brand identity from scratch — including logo, tagline, and pitch deck — within 24 hours and present your vision to judges.",
+      "The ultimate creative branding sprint. Design a complete brand identity from scratch - including logo, tagline, and pitch deck - within 24 hours and present your vision to judges.",
     icon: Palette,
     team: "Team of 2-3",
     features: [
@@ -229,7 +229,7 @@ export const NETWORKING_EVENTS = [
     id: "panel-1",
     title: "Panel Discussion 1", 
     type: "Panel Discussion",
-    description: "Debate: 'AI Ethics — Where Do We Draw the Line?' with experts from academia and industry.", 
+    description: "Debate: 'AI Ethics - Where Do We Draw the Line?' with experts from academia and industry.", 
     fullDescription: "A thought-provoking panel discussion featuring ethicists, technologists, and policymakers debating the critical questions around AI ethics, privacy, and responsible innovation. Engage with leaders shaping the future of ethical AI.",
     time: "2:00 PM", 
     day: "Day 1",
@@ -264,7 +264,7 @@ export const NETWORKING_EVENTS = [
     id: "panel-2",
     title: "Panel Discussion 2", 
     type: "Panel Discussion",
-    description: "Discussion: 'Women Founders — Breaking the Glass Ceiling in Tech'.", 
+    description: "Discussion: 'Women Founders - Breaking the Glass Ceiling in Tech'.", 
     fullDescription: "Celebrating women founders who are breaking barriers and building successful tech companies. Hear their stories of challenges, triumphs, and lessons learned on the path to building billion-dollar enterprises.",
     time: "2:00 PM", 
     day: "Day 2",
@@ -405,7 +405,7 @@ export const CONTACT_INFO = {
   email: "iiests.edc@gmail.com",
   phone1: { name: "Shreyansh", number: "+91 84780 90242" },
   phone2: { name: "Arnav Aarit", number: "+91 90602 27813" },
-  address: "Entrepreneurship Development Cell, IIEST Shibpur, Howrah, West Bengal — 711101",
+  address: "Entrepreneurship Development Cell, IIEST Shibpur, Howrah, West Bengal - 711101",
 };
 // ── Team Structure ──
 export const TEAM_STRUCTURE = [
